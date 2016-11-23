@@ -1,0 +1,22 @@
+{
+  "name": "recherchekompetenz",
+  "authors": [
+    "Pascal Pflaum <mail@pascalpflaum.de>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js-menu": "^0.7.1",
+    "reveal.js": "^3.3.0"
+  }
+}
