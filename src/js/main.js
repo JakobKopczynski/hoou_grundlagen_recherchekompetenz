@@ -86,7 +86,7 @@ Reveal.initialize({
 
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
-        {src: 'bower_components/reveal.js-menu/menu.js'}
+        {src: 'dependencies/reveal.js-menu/menu.js'}
         //            {
         //                src: 'lib/js/classList.js', condition: function () {
         //                return !document.body.classList;

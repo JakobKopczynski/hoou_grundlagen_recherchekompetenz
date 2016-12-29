@@ -67,8 +67,8 @@ module.exports = function (grunt) {
                 },
                 progress: false,
                 failOnError: false,
-                watch: true,
-                keepalive: true
+                watch: false,
+                keepalive: false
             }
         }
     });
