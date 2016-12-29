@@ -4,14 +4,19 @@ Reveal.initialize({
     progress: true,
     history: true,
     center: false,
-    width: "100%",
+    width: function(size) {
+        return parseInt( '100%', 10 ) / 100 * size.presentationWidth - 380;
+    },
     height: "100%",
     margin: 0,
     minScale: 0.2,
     maxScale: 2,
     slideNumber: 'c/t',
+    overview : false,
+    transitionSpeed : 'fast',
+    correctWidth : -380, // @todo: this is a hack into reveal
 
-    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    transition: 'none', // none/fade/slide/convex/concave/zoom
     keyboard: {
         37: 'prev',
         38: 'prev',
@@ -50,8 +55,8 @@ Reveal.initialize({
         // providing an array of objects with 'title', 'icon'
         // properties, and either a 'src' or 'content' property.
         custom: [
-            {title: 'DE', icon: '<img class="nav-flag" src="img/de.png">', link: 'DE.html'},
-            {title: 'EN', icon: '<img class="nav-flag" src="img/gb.png">', link: 'EN.html'}
+            {title: 'DE', icon: '<img class="nav-flag" src="img/de.png">', link: 'de.html'},
+            {title: 'EN', icon: '<img class="nav-flag" src="img/gb.png">', link: 'en.html'}
         ],
 
         // Specifies the themes that will be available in the themes
@@ -105,4 +110,24 @@ Reveal.initialize({
         //            {src: 'plugin/zoom-js/zoom.js', async: true},
         //            {src: 'plugin/notes/notes.js', async: true}
     ]
+});
+require('./exercises')('body > div.reveal section form.exercise');
+
+function resetSlideScrolling(slide) {
+    $(slide).removeClass('scrollable-slide');
+}
+
+function handleSlideScrolling(slide) {
+    // if ($(slide).height() >= 800) {
+        $(slide).addClass('scrollable-slide');
+    // }
+}
+
+Reveal.addEventListener('ready', function (event) {
+    handleSlideScrolling(event.currentSlide);
+});
+
+Reveal.addEventListener('slidechanged', function (event) {
+    resetSlideScrolling(event.previousSlide)
+    handleSlideScrolling(event.currentSlide);
 });
