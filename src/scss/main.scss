@@ -56,13 +56,46 @@ div.reveal {
 
   section {
 
+    > .navigation {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding-top: 30px;
+      > a {
+        text-decoration: none;
+        font-style: normal;
+        vertical-align: middle;
+
+        display: none;
+
+        > span {
+          font-size: 1.4em;
+          vertical-align: middle;
+        }
+
+      }
+
+      &.withPrev.withNext > a {
+
+        &:first-child {
+          padding-right: 30px;
+        }
+        &:last-child {
+          padding-left: 30px;
+        }
+      }
+
+      &.withPrev > a:first-child, &.withNext > a:last-child {
+        display: inline;
+      }
+    }
+
     &.withLogo {
       background: url('../../public/img/hoou.png') 95% 5% no-repeat;
     }
 
     img {
-      border:0;
-      background:none;
+      border: 0;
+      background: none;
       box-shadow: none;
     }
 
@@ -113,29 +146,35 @@ div.reveal {
     section {
       height: 100%;
       padding: 0;
-      .exercise {
-        .wrong {
-          color: red;
-        }
+
+      &.with-exercise > * {
+        max-width: 1000px;
+
       }
 
       form.exercise {
         position: relative;
-        max-width: 1000px;
         margin-left: 60px;
         padding-left: 0px;
 
-        div.goodOverlay {
+        div.resultOverlay {
+
           position: absolute;
           left: 0px;
           top: 0px;
-
-          border: rgba(146, 208, 80, 0.7) 2px solid;
           width: 100%;
-          background: rgba(146, 208, 80, 0.7);
           background-size: contain;
           border-radius: 20px;
           cursor: pointer;
+
+          &.correct {
+            background: rgba(146, 208, 80, 0.7);
+            border: rgba(146, 208, 80, 0.7) 2px solid;
+          }
+          &.wrong {
+            background: rgba(255, 0, 0, 0.7);
+            border: rgba(255, 0, 0, 0.7) 2px solid;
+          }
 
           div {
             position: absolute;
@@ -183,9 +222,22 @@ div.reveal {
             right: 12px;
             top: 12px;
             font-size: 1.3em;
-            font-weight:bold;
+            font-weight: bold;
           }
-          >div.elem {
+          > div.elem {
+
+            &.wrongChecked {
+              > div:first-child {
+                background: url('../../public/img/error.png') no-repeat left 4px center;
+              }
+            }
+
+            &.correctChecked {
+              color: green;
+              > div:first-child {
+                background: url('../../public/img/success.png') no-repeat left 4px center;
+              }
+            }
 
             > div {
               cursor: pointer;
@@ -225,7 +277,7 @@ div.reveal {
               text-transform: uppercase;
               border-radius: 0px 0px 20px 20px;
               font-size: 1.2em;
-              height:30px;
+              height: 30px;
 
             }
 

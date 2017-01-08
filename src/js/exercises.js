@@ -59,25 +59,42 @@ function exerciseLoader(id, $container) {
             $input.prop('disabled') ||
             $input.data('correctState') === true ||
             $input.data('correctState') === currentExercise;
-        visualizeState($elem, currentState === correctState);
+
+        setState($elem, currentState === correctState);
+        $elem.removeClass('correctChecked wrongChecked');
+
+        if (currentState) {
+
+            // Angekreuzt richtig grüner Haken dahinter und Sperren
+            if (currentState === correctState) {
+                $input.attr('disabled', true);
+                $elem.addClass('correctChecked');
+            } else {
+                $input.prop('checked', false);
+                $elem.addClass('wrongChecked');
+            }
+        }
     }
 
     function getInputsOfElemForGroup($elem, groupId) {
         return jQuery($elem.find('div.check').get(groupId)).children('input');
     }
 
-    function visualizeState($elem, correct) {
+    function setState($elem, correct) {
         $elem.toggleClass('wrong', !correct);
     }
 
 
     function checkTotalResult() {
+
         var errors = $elements.filter('.wrong').length;
 
         //solved correctly
-        if (!errors) {
-            showGoodResult();
+        if (errors) {
+            showBadResult();
+            return;
         }
+        showGoodResult();
     }
 
     function getCurrentGroup(currentExercise) {
@@ -132,7 +149,7 @@ function exerciseLoader(id, $container) {
     function showGoodResult() {
 
         var $table = $container.find('div.table');
-        var $goodOverlay = jQuery('<div class="goodOverlay">' +
+        var $goodOverlay = jQuery('<div class="resultOverlay correct">' +
             '<div class="waiter"></div>' +
             '<div class="cup"></div>' +
             '<div class="smoke"></div>' +
@@ -148,6 +165,21 @@ function exerciseLoader(id, $container) {
                     finishedExercise();
                 }
                 $goodOverlay.remove();
+            })
+            .css({
+                height: ($table.height()) + 'px'
+            })
+            .appendTo($container);
+    }
+
+    function showBadResult() {
+
+        var $table = $container.find('div.table');
+        var $badOverlay = jQuery('<div class="resultOverlay wrong">' +
+            '<div class="waiter"></div>' +
+            '</div>')
+            .on('click', function () {
+                $badOverlay.remove();
             })
             .css({
                 height: ($table.height()) + 'px'

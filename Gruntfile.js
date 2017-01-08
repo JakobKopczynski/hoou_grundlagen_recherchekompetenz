@@ -30,8 +30,8 @@ module.exports = function (grunt) {
                     filename: 'js/module.js'
                 },
                 plugins: [
-                    // new webpack.optimize.DedupePlugin(),
-                    // new webpack.optimize.UglifyJsPlugin()
+                    new webpack.optimize.DedupePlugin(),
+                    new webpack.optimize.UglifyJsPlugin(),
                     new ExtractTextPlugin('style.css', {
                         allChunks: true
                     })

@@ -2,19 +2,19 @@
 Reveal.initialize({
     controls: false,
     progress: true,
-    history: true,
+    history: false,
     center: false,
-    width: function(size) {
-        return parseInt( '100%', 10 ) / 100 * size.presentationWidth - 380;
+    width: function (size) {
+        return parseInt('100%', 10) / 100 * size.presentationWidth - 380;
     },
     height: "100%",
     margin: 0,
     minScale: 0.2,
     maxScale: 2,
     slideNumber: 'c/t',
-    overview : false,
-    transitionSpeed : 'fast',
-    correctWidth : -380, // @todo: this is a hack into reveal
+    overview: false,
+    transitionSpeed: 'fast',
+    correctWidth: -380, // @todo: this is a hack into reveal
 
     transition: 'none', // none/fade/slide/convex/concave/zoom
     keyboard: {
@@ -87,28 +87,6 @@ Reveal.initialize({
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
         {src: 'dependencies/reveal.js-menu/menu.js'}
-        //            {
-        //                src: 'lib/js/classList.js', condition: function () {
-        //                return !document.body.classList;
-        //            }
-        //            },
-        //            {
-        //                src: 'plugin/markdown/marked.js', condition: function () {
-        //                return !!document.querySelector('[data-markdown]');
-        //            }
-        //            },
-        //            {
-        //                src: 'plugin/markdown/markdown.js', condition: function () {
-        //                return !!document.querySelector('[data-markdown]');
-        //            }
-        //            },
-        //            {
-        //                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-        //                hljs.initHighlightingOnLoad();
-        //            }
-        //            },
-        //            {src: 'plugin/zoom-js/zoom.js', async: true},
-        //            {src: 'plugin/notes/notes.js', async: true}
     ]
 });
 require('./exercises')('body > div.reveal section form.exercise');
@@ -118,9 +96,7 @@ function resetSlideScrolling(slide) {
 }
 
 function handleSlideScrolling(slide) {
-    // if ($(slide).height() >= 800) {
-        $(slide).addClass('scrollable-slide');
-    // }
+    $(slide).addClass('scrollable-slide');
 }
 
 Reveal.addEventListener('ready', function (event) {
@@ -128,6 +104,27 @@ Reveal.addEventListener('ready', function (event) {
 });
 
 Reveal.addEventListener('slidechanged', function (event) {
-    resetSlideScrolling(event.previousSlide)
+    resetSlideScrolling(event.previousSlide);
     handleSlideScrolling(event.currentSlide);
 });
+
+
+jQuery('section > .navigation').each(createNavigation);
+
+
+function createNavigation() {
+    var $panel = jQuery(this);
+    jQuery('<a href="#"><span>&lt;</span> zurück</a>').appendTo($panel).click(navigationPrev);
+    jQuery('<a href="#">weiter <span>&gt;</span></a>').appendTo($panel).click(navigationNext);
+
+}
+
+function navigationPrev(event) {
+    if (event) event.preventDefault();
+    Reveal.navigatePrev();
+}
+
+function navigationNext(event) {
+    if (event) event.preventDefault();
+    Reveal.navigateNext();
+}
