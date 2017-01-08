@@ -90,6 +90,7 @@ Reveal.initialize({
     ]
 });
 require('./exercises')('body > div.reveal section form.exercise');
+require('./feedback')('section div.feedbackArea');
 
 function resetSlideScrolling(slide) {
     $(slide).removeClass('scrollable-slide');

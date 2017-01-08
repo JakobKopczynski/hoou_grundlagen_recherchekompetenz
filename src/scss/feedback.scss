@@ -1,0 +1,24 @@
+.feedbackArea .coordinates {
+
+  border: 3px solid black;
+  width: 400px;
+  height: 400px;
+  position: relative;
+
+  &.active {
+    cursor: crosshair;
+  }
+
+  .coordinate {
+    height: 8px;
+    width: 8px;
+    background: black;
+    position: absolute;
+    border-radius: 4px;
+
+    &.my {
+      background: red;
+    }
+  }
+
+}
