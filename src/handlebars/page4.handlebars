@@ -1,0 +1,180 @@
+<section class="with-exercise">
+    <h2 class="icon icon-exercise">{{page.[3].headline}}</h2>
+    <p>{{exercise.info}}</p>
+    <p>
+
+    </p>
+    <form class="exercise">
+
+        <table>
+            <thead>
+            <tr>
+                <th colspan="3">
+                    {{& page.[3].explanation}}
+                    {{page.[3].pleaseOrder}}
+                </th>
+            </tr>
+            </thead>
+
+
+            {{#with exercise.drinks}}
+            <tr class="elem">
+                <td>{{cafeAuLait.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{cafeAuLait.title}}">
+                </td>
+                <td>{{cafeAuLait.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Einspänner.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Einspänner.title}}">
+                </td>
+                <td>{{Einspänner.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Eiskaffee.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Eiskaffee.title}}">
+                </td>
+                <td>{{Eiskaffee.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Fiaker.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Fiaker.title}}">
+                </td>
+                <td>{{Fiaker.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Franziskaner.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Franziskaner.title}}">
+                </td>
+                <td>{{Franziskaner.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Häferlkaffee.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Häferlkaffee.title}}">
+                </td>
+                <td>{{Häferlkaffee.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Kännchen.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Kännchen.title}}">
+                </td>
+                <td>{{Kännchen.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Kleiner.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Kleiner.title}}">
+                </td>
+                <td>{{Kleiner.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Latte.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Latte.title}}">
+                </td>
+                <td>{{Latte.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Maria.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Maria.title}}">
+                </td>
+                <td>{{Maria.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Melange.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Melange.title}}">
+                </td>
+                <td>{{Melange.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Milchkaffee.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Milchkaffee.title}}">
+                </td>
+                <td>{{Milchkaffee.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Pharisäer.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Pharisäer.title}}" data-correct-state="true">
+                </td>
+                <td>{{Pharisäer.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Rüdesheimer.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Rüdesheimer.title}}">
+                </td>
+                <td>{{Rüdesheimer.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{TürkKahvesi.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{TürkKahvesi.title}}">
+                </td>
+                <td>{{TürkKahvesi.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Verkehrter.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Verkehrter.title}}">
+                </td>
+                <td>{{Verkehrter.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Verlängerter.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Verlängerter.title}}">
+                </td>
+                <td>{{Verlängerter.desc}}</td>
+            </tr>
+
+            <tr class="elem">
+                <td>{{Wiener.title}}</td>
+                <td class="check">
+                    <input type="checkbox" name="drink" value="{{Wiener.title}}">
+                </td>
+                <td>{{Wiener.desc}}</td>
+            </tr>
+
+            {{/with}}
+            <tfoot class="tableBottom">
+            <tr>
+                <th colspan="3">
+                    <a href class="send">{{exercise.submit}}</a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+        <br/>
+
+
+    </form>
+    {{> pageNavigationFull }}
+
+</section>

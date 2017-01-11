@@ -1,11 +1,11 @@
 @import "../../public/dependencies/reveal.js/css/reveal.css";
 @import "../../public/dependencies/reveal.js-menu/menu.css";
 @import "../../public/dependencies/reveal.js/css/theme/white.css";
-
 @import "./feedback.scss";
 
 div.reveal {
-  font-family: Helvetica, "Source Sans Pro", sans-serif;
+  //font-family: Helvetica, "Source Sans Pro", sans-serif;
+  font-family: sans-serif;
   font-size: 34px;
 
   .progress {
@@ -208,16 +208,12 @@ div.reveal {
 
         }
 
-        div.table {
-          display: table;
+        table {
           font-size: 0.9em;
           width: 100%;
           border: black 2px solid;
-          border-collapse: collapse;
-
-          div.check {
-            width: 25px;
-          }
+          border-collapse: separate;
+          border: none;
 
           div.exerciseProgress {
             position: absolute;
@@ -226,69 +222,68 @@ div.reveal {
             font-size: 1.3em;
             font-weight: bold;
           }
-          > div.elem {
+
+          thead tr th {
+            border: black 2px solid;
+            padding: 8px 20px;
+            border-radius: 20px 20px 0px 0px;
+
+          }
+
+          tfoot tr th {
+            border: black 2px solid;
+            padding: 8px;
+            text-align: right;
+            text-transform: uppercase;
+            border-radius: 0px 0px 20px 20px;
+            font-size: 1.2em;
+            height: 30px;
+          }
+
+          tbody tr {
+            line-height: 1.4em;
+
+            &:nth-child(even) {
+              background: #DDD;
+            }
 
             &.wrongChecked {
-              > div:first-child {
+              td:first-child {
                 background: url('../../public/img/error.png') no-repeat left 4px center;
               }
             }
 
             &.correctChecked {
-              color: green;
-              > div:first-child {
+              td:first-child {
                 background: url('../../public/img/success.png') no-repeat left 4px center;
               }
             }
 
-            > div {
+            td {
+              &:first-child {
+                border-left: black 2px solid;
+              }
+              &:last-child {
+                border-right: black 2px solid;
+              }
               cursor: pointer;
               padding: 2px;
+
+              &.check {
+                width: 25px;
+              }
+
               &:first-child {
                 padding-left: 16px;
                 text-align: right;
                 white-space: nowrap;
                 font-size: 1.1em;
               }
+
               &:last-child {
                 padding-right: 16px;
                 font-size: .9em;
               }
-            }
-          }
-          > div {
-            display: table-row;
-            line-height: 1.4em;
-
-            &.tableHead {
-              display: table-caption;
-              border: black 2px solid;
-              border-bottom: none;
-              padding: 8px 20px;
-              border-radius: 20px 20px 0px 0px;
-
-            }
-
-            &.tableBottom {
-              display: table-caption;
-              caption-side: bottom;
-              border: black 2px solid;
-              border-top: none;
-              padding: 8px;
-              text-align: right;
-              text-transform: uppercase;
-              border-radius: 0px 0px 20px 20px;
-              font-size: 1.2em;
-              height: 30px;
-
-            }
-
-            &:nth-child(even) {
-              background: #DDD;
-            }
-
-            > div {
-              display: table-cell;
             }
           }
         }

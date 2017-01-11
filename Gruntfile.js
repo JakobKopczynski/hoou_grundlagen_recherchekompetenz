@@ -5,10 +5,36 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-compile-handlebars');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+
 
     grunt.initConfig({
+        clean: ['public/de.html'],
+        'compile-handlebars': {
+            de: {
+                files: [{
+                    src: './src/handlebars/main.handlebars',
+                    dest: './public/de.html'
+                }],
+                // preHTML: 'src/handlebars/pre-dev.html',
+                // postHTML: 'src/handlebars/post-dev.html',
+                templateData: require('./content/de.js'),
+                partials: './src/handlebars/*.handlebars'
+            }
+        },
         watch: {
-            scripts: {
+            'compile': {
+                files: [
+                    './src/handlebars/**/*.handlebars',
+                    './content/**/*.*'
+                ],
+                tasks: ['compile'],
+                options: {
+                    spawn: true
+                }
+            },
+            webpack: {
                 files: [
                     './src/scss/**/*.scss',
                     './src/js/**/*.js'
@@ -73,6 +99,6 @@ module.exports = function (grunt) {
         }
     });
 
-
+    grunt.registerTask('compile', ['clean', 'compile-handlebars']);
     grunt.registerTask('default', ['webpack', 'watch']);
 };

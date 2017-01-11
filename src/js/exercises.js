@@ -25,7 +25,7 @@ function exerciseLoader(id, $container) {
     var $send = $container.find('.send');
     $send.on('click', onSend);
 
-    var $elements = $container.find('div.table > div.elem');
+    var $elements = $container.find('table .elem');
 
     $elements.on('click', onLineClick);
 
@@ -77,7 +77,7 @@ function exerciseLoader(id, $container) {
     }
 
     function getInputsOfElemForGroup($elem, groupId) {
-        return jQuery($elem.find('div.check').get(groupId)).children('input');
+        return jQuery($elem.find('.check').get(groupId)).children('input');
     }
 
     function setState($elem, correct) {
@@ -148,7 +148,7 @@ function exerciseLoader(id, $container) {
 
     function showGoodResult() {
 
-        var $table = $container.find('div.table');
+        var $table = $container.find('table');
         var $goodOverlay = jQuery('<div class="resultOverlay correct">' +
             '<div class="waiter"></div>' +
             '<div class="cup"></div>' +
@@ -174,7 +174,7 @@ function exerciseLoader(id, $container) {
 
     function showBadResult() {
 
-        var $table = $container.find('div.table');
+        var $table = $container.find('table');
         var $badOverlay = jQuery('<div class="resultOverlay wrong">' +
             '<div class="waiter"></div>' +
             '</div>')

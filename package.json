@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/grunt-cli/bin/grunt",
     "build": "./node_modules/grunt-cli/bin/grunt webpack",
     "bower": "./node_modules/bower/bin/bower install",
     "postinstall": "npm run bower && npm run build"
@@ -22,6 +23,8 @@
     "grunt": "^1.0.1",
     "grunt-bower-concat": "^1.0.0",
     "grunt-cli": "^1.2.0",
+    "grunt-compile-handlebars": "^2.0.2",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-webpack": "^1.0.18",
     "node-sass": "^3.13.1",
