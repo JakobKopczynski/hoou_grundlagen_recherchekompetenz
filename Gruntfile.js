@@ -100,5 +100,5 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('compile', ['clean', 'compile-handlebars']);
-    grunt.registerTask('default', ['webpack', 'watch']);
+    grunt.registerTask('default', ['webpack','compile', 'watch']);
 };

@@ -1,7 +1,11 @@
 module.exports = {
+    lang: {
+        de: true
+    },
     exercise: {
         info: 'Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen, und das ist nicht immer das, was Sie auch wünschen.',
         submit: 'Bestellen',
+        pleaseOrder: 'Bitte markieren Sie alles, was Sie bekommen.',
         drinks: {
             cafeAuLait: {
                 title: 'Café au Lait',
@@ -78,22 +82,30 @@ module.exports = {
         }
     },
     page: [
-        {
-            headline: 'Übung - formale Suche 1',
-            pleaseOrder: 'Bitte markieren Sie alles, was Sie bekommen.'
+        { //page1
+            headline: 'Lernziele'
         },
-        {
-            headline: 'Übung - formale Suche 1',
-            pleaseOrder: 'Bitte markieren Sie alles, was Sie bekommen.'
+        { //page2
+            headline: 'Formale, inhaltliche und feldbezogene Suche'
         },
-        {
-            headline: 'Übung - formale Suche 1',
-            pleaseOrder: 'Bitte markieren Sie alles, was Sie bekommen.'
+        { //page3
+            headline: 'Beispiel - Formale Suche'
         },
-        {
+        { //page4
             headline: 'Übung - formale Suche 1',
-            pleaseOrder: 'Bitte markieren Sie alles, was Sie bekommen.',
-            explanation: 'Sie finden in einer Literaturliste den Hinweis auf “Pharisäer” und bestellen mit der Eingabe <span class="searchPhrase">pharisäer.</span><br/>'
-        }
+            explanation: 'Sie finden in einer Literaturliste den Hinweis auf “Pharisäer” und bestellen mit der Eingabe <span class="searchPhrase">pharisäer.</span>'
+        },
+        { //page5
+            headline: 'Übung - formale Suche 2',
+            explanation: 'Sie bekommen von einem Kommilitonen mündlich den Hinweis auf eine italienische Kaffespezialität und bestellen mit der Eingabe <span class="searchPhrase">latte macciato</span>.'
+        },
+        {}, //page6
+        { //page7
+            headline: 'Übung',
+            explanation: 'Sie wünschen Kaffee mit Schlagsahne oder Schlagobers und bestellen mit der Eingabe <span class="searchPhrase">schlag*</span>.<br/>Das * ersetzt eine beliebige Anzahl von Buchstaben.'
+        },
+        {}, //page8
+        {}, //page9
+        {}, //page10
     ]
 };

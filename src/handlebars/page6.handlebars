@@ -1,0 +1,81 @@
+
+<section>
+    <h2 class="icon icon-information">Trunkieren</h2>
+    {{#if lang.de}}
+    <p>
+        Das Trunkierungszeichen (auch Wildcard-Operator, Joker oder Platzhalter genannt) ersetzt bei der Suchanfrage
+    </p>
+    <ul>
+        <li>
+            einen Buchstaben oder
+        </li>
+        <li>
+            keinen bis zu einer beliebigen Anzahl von Buchstaben
+        </li>
+    </ul>
+    <p>
+        In den meisten Ressourcen wird das Sternchen (Asterisk, *) verwendet, in anderen !, ?, $ oder #. Prüfen Sie in jeder Ressource in den Hilfetexten, welches Zeichen für welche
+        Abkürzung verwendet wird.
+    </p>
+    <p>
+        In den meisten Ressourcen ist die Rechts- oder Endtrunkierung möglich, in einigen zusätzlich die Links- oder Anfangstrunkierung.
+    </p>
+    <h3 class="icon icon-example">
+        Beispiele
+    </h3>
+    <p>
+        Sie geben in eine Ressource <span class="searchPhrase">me?er</span> ein und erhalten Treffer, in denen folgende Worte vorkommen:
+    </p>
+    <ul>
+        <li>
+            Meier
+        </li>
+        <li>
+            Meyer
+        </li>
+        <li>
+            aber auch Meter
+        </li>
+    </ul>
+    <p class="extraPaddingBottom">
+        <strong>
+            Trunkierungszeichen ? ersetzt einen Buchstaben
+        </strong>
+    </p>
+    <p>
+        Die Eingabe <span class="searchPhrase">wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen, z.B.
+    </p>
+    <ul>
+        <li>
+            Wirtschaft
+        </li>
+        <li>
+            Wirtschafts-
+        </li>
+        <li>
+            Wirtschaftsrecht
+        </li>
+    </ul>
+    <p>
+        Eingabe <span class="searchPhrase">*wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen:
+    </p>
+    <ul>
+        <li>
+            Wirtschaft
+        </li>
+        <li>
+            Betriebswirtschaftslehre
+        </li>
+        <li>
+            Hauswirtschaftlerin
+        </li>
+    </ul>
+    <p>
+        <strong>
+            Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben
+        </strong>
+    </p>
+    {{/if}}
+    {{> pageNavigationFull }}
+
+</section>
