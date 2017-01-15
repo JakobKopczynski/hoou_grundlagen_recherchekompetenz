@@ -4,7 +4,7 @@
 @import "./feedback.scss";
 
 div.reveal {
-  //font-family: Helvetica, "Source Sans Pro", sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-family: sans-serif;
   font-size: 34px;
 
@@ -290,14 +290,17 @@ div.reveal {
             }
 
             td {
+
+              cursor: pointer;
+              padding: 2px;
+              vertical-align: middle;
+
               &:first-child {
                 border-left: black 2px solid;
               }
               &:last-child {
                 border-right: black 2px solid;
               }
-              cursor: pointer;
-              padding: 2px;
 
               &.check {
                 width: 25px;

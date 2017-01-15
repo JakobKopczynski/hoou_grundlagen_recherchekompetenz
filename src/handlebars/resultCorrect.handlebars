@@ -2,7 +2,7 @@
     <div class="waiter"></div>
     <div class="cup"></div>
     <div class="smoke"></div>
-    <div class="feedback">{{exercise.feedbackCorrect}}</div>
+    <div class="feedback">{{& exercise.feedbackCorrect}}</div>
     {{^exercise.feedbackCorrect}}<div class="correct">{{exercise.correct}}</div>{{/exercise.feedbackCorrect}}
     <div class="next">{{exercise.next}}</div>
 </div>
