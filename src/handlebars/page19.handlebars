@@ -1,0 +1,233 @@
+<section class="with-exercise">
+    <h2 class="icon icon-exercise">{{page.[18].headline}}</h2>
+    <p>{{exercise.info}}</p>
+    <p></p>
+
+    <form class="exercise" data-multi-exercise="true">
+
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2">
+                    {{& page.[18].explanation}}
+                    <br/>
+                    {{#each page.[18].tasks}}
+                    <span class="exercise">{{& .}}</span>
+                    {{/each}}
+                    <div class="exerciseProgress"></div>
+                </th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr class="elem">
+
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K">
+                </td>
+                <td>
+                    <b>K</b> Kaffee
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K1" data-correct-state="0">
+                </td>
+                <td>
+                    <b>____ K1</b> schwarz oder mit Süßungsmitteln
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K2">
+                </td>
+                <td>
+                    <b>____ K2</b> mit Milchprodukten
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K21">
+                </td>
+                <td>
+                    <b>________ K21</b> mit Milch
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K22">
+                </td>
+                <td>
+                    <b>________ K22</b> mit Kaffeesahne
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K23">
+                </td>
+                <td>
+                    <b>________ K23</b> mit Schlagsahne
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K24" data-correct-state="1">
+                </td>
+                <td>
+                    <b>________ K24</b> mit Eis und Schlagsahne
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K3">
+                </td>
+                <td>
+                    <b>____ K3</b> mit Alkohol
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K31">
+                </td>
+                <td>
+                    <b>________ K31</b> mit Likör
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K32">
+                </td>
+                <td>
+                    <b>________ K32</b> mit Branntwein
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K321">
+                </td>
+                <td>
+                    <b>____________ K321</b> mit Rum
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K322">
+                </td>
+                <td>
+                    <b>____________ K322</b> mit Weinbrand
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K4">
+                </td>
+                <td>
+                    <b>____ K4</b> mit Milchprodukten und Alkohol
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K41">
+                </td>
+                <td>
+                    <b>________ K41</b> mit Kaffeesahne und Alkohol
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K412">
+                </td>
+                <td>
+                    <b>________ K412</b> mit Kaffeesahne und Likör
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K4121">
+                </td>
+                <td>
+                    <b>____________ K4121</b> mit Kaffeesahne und Rum
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K4122">
+                </td>
+                <td>
+                    <b>____________ K4122</b> mit Kaffeesahne und Weinbrand
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K4123">
+                </td>
+                <td>
+                    <b>____________ K4123</b> mit Kaffeesahne und Kirschwasser
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K42">
+                </td>
+                <td>
+                    <b>____ K42</b> mit Schlagsahne und Alkohol
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K421">
+                </td>
+                <td>
+                    <b>________ K421</b> mit Schlagsahne und Likör
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K422">
+                </td>
+                <td>
+                    <b>________ K422</b> mit Schlagsahne und Branntwein
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K4221">
+                </td>
+                <td>
+                    <b>____________ K4221</b> mit Schlagsahne und Rum
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K4222">
+                </td>
+                <td>
+                    <b>____________ K4222</b> mit Schlagsahne und Weinbrand
+                </td>
+            </tr>
+            <tr class="elem">
+                <td class="check">
+                    <input type="checkbox" name="drink" value="K4223" data-correct-state="2">
+                </td>
+                <td>
+                    <b>____________ K4223</b> mit Schlagsahne und Kirschwasser
+                </td>
+
+            </tr>
+            </tbody>
+
+            <tfoot class="tableBottom">
+            <tr>
+                <th colspan="2">
+                    <a href class="send">{{exercise.submit}}</a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+        <br/>
+
+
+    </form>
+    {{> pageNavigationFull }}
+
+</section>

@@ -170,22 +170,31 @@ div.reveal {
           cursor: pointer;
 
           &.correct {
-            background: rgba(146, 208, 80, 0.7);
-            border: rgba(146, 208, 80, 0.7) 2px solid;
+            background: rgba(146, 208, 80, 1);
+            border: rgba(146, 208, 80, 1) 2px solid;
           }
           &.wrong {
-            background: rgba(255, 0, 0, 0.7);
-            border: rgba(255, 0, 0, 0.7) 2px solid;
+            background: rgba(255, 0, 0, 1);
+            border: rgba(255, 0, 0, 1) 2px solid;
           }
 
           div {
             position: absolute;
+            color: #ffffff;
+            font-size: 3em;
+            font-weight: bolder;
+
+            &.feedback {
+              font-size: 1.5em;
+              font-weight: bold;
+              padding: 30px;
+            }
 
             &.waiter {
               background: url('../../public/img/coffee/waiter.gif') no-repeat center center;
               width: 355px;
               height: 380px;
-              top: 200px;
+              bottom: -2px;
               left: 200px;
             }
 
@@ -194,15 +203,25 @@ div.reveal {
               width: 72px;
               height: 48px;
               left: 420px;
-              top: 274px;
+              bottom: 255px;
             }
 
             &.smoke {
-              background: url('../../public/img/coffee/smoke.gif') no-repeat center center;
-              width: 182px;
-              height: 250px;
+              background: url('../../public/img/coffee/smoke.gif') no-repeat left center;
+              width: 180px;
+              height: 248px;
               left: 380px;
-              top: 50px;
+              bottom: 260px;
+            }
+
+            &.retry, &.next {
+              top: 400px;
+              left: 700px;
+            }
+
+            &.correct, &.wrong {
+              top: 100px;
+              left: 100px;
             }
           }
 
@@ -223,15 +242,22 @@ div.reveal {
             font-weight: bold;
           }
 
-          thead tr th {
+          th {
+
             border: black 2px solid;
-            padding: 8px 20px;
+            font-weight: normal;
+          }
+
+          thead tr th {
+            padding: 8px 60px 8px 20px;
             border-radius: 20px 20px 0px 0px;
 
+            &.afterAllDone {
+              display: none;
+            }
           }
 
           tfoot tr th {
-            border: black 2px solid;
             padding: 8px;
             text-align: right;
             text-transform: uppercase;
@@ -257,6 +283,10 @@ div.reveal {
               td:first-child {
                 background: url('../../public/img/success.png') no-repeat left 4px center;
               }
+            }
+
+            &.incrementalFinalResult {
+              font-weight: bold;
             }
 
             td {

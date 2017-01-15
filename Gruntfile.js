@@ -6,10 +6,23 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-webpack');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-compile-handlebars');
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
 
     grunt.initConfig({
+        handlebars: {
+            compile: {
+                options: {
+                    namespace: false,
+                    commonjs : true
+                },
+                files: {
+                    './src/handlebars/compiled/resultCorrect.js': './src/handlebars/resultCorrect.handlebars',
+                    './src/handlebars/compiled/resultWrong.js': './src/handlebars/resultWrong.handlebars'
+                }
+            }
+        },
         clean: ['public/de.html'],
         'compile-handlebars': {
             de: {
@@ -17,19 +30,17 @@ module.exports = function (grunt) {
                     src: './src/handlebars/main.handlebars',
                     dest: './public/de.html'
                 }],
-                // preHTML: 'src/handlebars/pre-dev.html',
-                // postHTML: 'src/handlebars/post-dev.html',
                 templateData: require('./content/de.js'),
                 partials: './src/handlebars/*.handlebars'
             }
         },
         watch: {
-            'compile': {
+            compile: {
                 files: [
                     './src/handlebars/**/*.handlebars',
                     './content/**/*.*'
                 ],
-                tasks: ['compile'],
+                tasks: ['handlebars', 'compile'],
                 options: {
                     spawn: true
                 }
@@ -99,6 +110,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('compile', ['clean', 'compile-handlebars']);
-    grunt.registerTask('default', ['webpack','compile', 'watch']);
+    grunt.registerTask('compile', ['clean', 'handlebars', 'compile-handlebars']);
+    grunt.registerTask('default', ['compile', 'webpack', 'watch']);
 };

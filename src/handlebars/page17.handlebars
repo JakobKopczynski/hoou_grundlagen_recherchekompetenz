@@ -1,15 +1,15 @@
 <section class="with-exercise">
-    <h2 class="icon icon-exercise">{{page.[6].headline}}</h2>
+    <h2 class="icon icon-exercise">{{page.[16].headline}}</h2>
     <p>{{exercise.info}}</p>
     <p></p>
 
-    <form class="exercise" data-feedback-wrong="{{page.[6].wrong}}">
+    <form class="exercise">
 
         <table>
             <thead>
             <tr>
                 <th colspan="3">
-                    {{& page.[6].explanation}}
+                    {{& page.[16].explanation}}
                     <br/>
                     {{exercise.pleaseOrder}}
                 </th>
@@ -23,31 +23,31 @@
                 <td class="check">
                     <input type="checkbox" name="drink" value="{{cafeAuLait.title}}">
                 </td>
-                <td>{{cafeAuLait.desc}}</td>
+                <td>{{cafeAuLait.desc}}<br/><i>Schlagworte: {{cafeAuLait.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Einspänner.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Einspänner.title}}" data-correct-state="true">
+                    <input type="checkbox" name="drink" value="{{Einspänner.title}}">
                 </td>
-                <td>{{Einspänner.desc}}</td>
+                <td>{{Einspänner.desc}}<br/><i>Schlagworte: {{Einspänner.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Eiskaffee.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Eiskaffee.title}}">
+                    <input type="checkbox" name="drink" value="{{Eiskaffee.title}}" data-correct-state="true">
                 </td>
-                <td>{{Eiskaffee.desc}}</td>
+                <td>{{Eiskaffee.desc}}<br/><i>Schlagworte: {{Eiskaffee.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Fiaker.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Fiaker.title}}" data-correct-state="true">
+                    <input type="checkbox" name="drink" value="{{Fiaker.title}}">
                 </td>
-                <td>{{Fiaker.desc}}</td>
+                <td>{{Fiaker.desc}}<br/><i>Schlagworte: {{Fiaker.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
@@ -55,7 +55,7 @@
                 <td class="check">
                     <input type="checkbox" name="drink" value="{{Franziskaner.title}}" data-correct-state="true">
                 </td>
-                <td>{{Franziskaner.desc}}</td>
+                <td>{{Franziskaner.desc}}<br/><i>Schlagworte: {{Franziskaner.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
@@ -63,7 +63,7 @@
                 <td class="check">
                     <input type="checkbox" name="drink" value="{{Häferlkaffee.title}}">
                 </td>
-                <td>{{Häferlkaffee.desc}}</td>
+                <td>{{Häferlkaffee.desc}}<br/><i>Schlagworte: {{Häferlkaffee.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
@@ -71,7 +71,7 @@
                 <td class="check">
                     <input type="checkbox" name="drink" value="{{Kännchen.title}}">
                 </td>
-                <td>{{Kännchen.desc}}</td>
+                <td>{{Kännchen.desc}}<br/><i>Schlagworte: {{Kännchen.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
@@ -79,7 +79,7 @@
                 <td class="check">
                     <input type="checkbox" name="drink" value="{{Kleiner.title}}">
                 </td>
-                <td>{{Kleiner.desc}}</td>
+                <td>{{Kleiner.desc}}<br/><i>Schlagworte: {{Kleiner.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
@@ -87,47 +87,39 @@
                 <td class="check">
                     <input type="checkbox" name="drink" value="{{Latte.title}}">
                 </td>
-                <td>{{Latte.desc}}</td>
+                <td>{{Latte.desc}}<br/><i>Schlagworte: {{Latte.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Maria.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Maria.title}}" data-correct-state="true">
+                    <input type="checkbox" name="drink" value="{{Maria.title}}">
                 </td>
-                <td>{{Maria.desc}}</td>
+                <td>{{Maria.desc}}<br/><i>Schlagworte: {{Maria.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Melange.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Melange.title}}">
+                    <input type="checkbox" name="drink" value="{{Melange.title}}" data-correct-state="true">
                 </td>
-                <td>{{Melange.desc}}</td>
-            </tr>
-
-            <tr class="elem">
-                <td>{{Milchkaffee.title}}</td>
-                <td class="check">
-                    <input type="checkbox" name="drink" value="{{Milchkaffee.title}}">
-                </td>
-                <td>{{Milchkaffee.desc}}</td>
+                <td>{{Melange.desc}}<br/><i>Schlagworte: {{Melange.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Pharisäer.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Pharisäer.title}}" data-correct-state="true">
+                    <input type="checkbox" name="drink" value="{{Pharisäer.title}}">
                 </td>
-                <td>{{Pharisäer.desc}}</td>
+                <td>{{Pharisäer.desc}}<br/><i>Schlagworte: {{Pharisäer.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Rüdesheimer.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Rüdesheimer.title}}" data-correct-state="true">
+                    <input type="checkbox" name="drink" value="{{Rüdesheimer.title}}">
                 </td>
-                <td>{{Rüdesheimer.desc}}</td>
+                <td>{{Rüdesheimer.desc}}<br/><i>Schlagworte: {{Rüdesheimer.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
@@ -135,31 +127,15 @@
                 <td class="check">
                     <input type="checkbox" name="drink" value="{{TürkKahvesi.title}}">
                 </td>
-                <td>{{TürkKahvesi.desc}}</td>
-            </tr>
-
-            <tr class="elem">
-                <td>{{Verkehrter.title}}</td>
-                <td class="check">
-                    <input type="checkbox" name="drink" value="{{Verkehrter.title}}">
-                </td>
-                <td>{{Verkehrter.desc}}</td>
-            </tr>
-
-            <tr class="elem">
-                <td>{{Verlängerter.title}}</td>
-                <td class="check">
-                    <input type="checkbox" name="drink" value="{{Verlängerter.title}}">
-                </td>
-                <td>{{Verlängerter.desc}}</td>
+                <td>{{TürkKahvesi.desc}}<br/><i>Schlagworte: {{TürkKahvesi.keywords}}</i></td>
             </tr>
 
             <tr class="elem">
                 <td>{{Wiener.title}}</td>
                 <td class="check">
-                    <input type="checkbox" name="drink" value="{{Wiener.title}}" data-correct-state="true">
+                    <input type="checkbox" name="drink" value="{{Wiener.title}}">
                 </td>
-                <td>{{Wiener.desc}}</td>
+                <td>{{Wiener.desc}}<br/><i>Schlagworte: {{Wiener.keywords}}</i></td>
             </tr>
 
             {{/with}}

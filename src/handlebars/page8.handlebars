@@ -1,0 +1,104 @@
+
+<section>
+    {{#if lang.de}}
+        <h2 class="icon icon-information">Verknüpfen</h2>
+        <p>
+            Eine Form der Verknüpfung kennen Sie aus dem Umgang mit Suchmaschinen: Wenn Sie mehrere Suchbegriffe, durch Leerzeichen voneinander getrennt, hintereinander schreiben, erhalten Sie
+            Treffer, in denen alle Suchbegriffe vorkommen, unabhängig von der Reihenfolge und den Zusammenhängen. In manchen Ressourcen werden diese Verknüpfungs-Operatoren durch Zeichen oder
+            Wörter dargestellt, in manchen durch Felder zum Anklicken.
+        </p>
+        <p>
+            Nachfolgend finden Sie die wichtigsten Verknüpfungsoperatoren und Beispiele.
+        </p>
+        <h3>
+            Leerzeichen, +, UND, und, AND, and
+        </h3>
+        <p>
+            Diese Verknüpfungsoperatoren finden alle Treffer, in denen alle verknüpften Suchbegriffe vorkommen
+        </p>
+        <h4 class="icon icon-example">
+            Beispiel
+        </h4>
+        <p>
+            Die Eingabe <span class="searchPhrase">mankiw UND volkswirtschaftslehre</span> findet
+        </p>
+        <ul>
+            <li>
+                Mankiw: Grundzüge der Volkswirtschaftslehre
+            </li>
+        </ul>
+        <h3>
+            /, ODER, oder, OR, or
+        </h3>
+        <p>
+            findet alle Treffer, in denen mindestens ein Suchbegriff vorkommt.
+        </p>
+        <p>
+            <strong>Achtung!</strong> Anders als im normalen Sprachgebrauch handelt es sich hier nicht um ein
+            exklusives ODER („Christin oder Jakob machen den Abwasch“), sondern um ein inklusives ODER („Christin oder Jakob oder beide …“)!
+        </p>
+        <h4 class="icon icon-example">
+            Beispiel
+        </h4>
+        <p>
+            Die Eingabe <span class="searchPhrase">mankiw ODER volkswirtschaftslehre</span> findet
+        </p>
+        <ul>
+            <li>
+                Mankiw: Makroökonomik – mit vielen Fallbeispielen
+            </li>
+            <li>
+                Ending: Volkswirtschaftslehre – schnell erfasst
+            </li>
+            <li>
+                Mankiw: Grundzüge der Volkswirtschaftslehre
+            </li>
+        </ul>
+        <h3>
+            -, NICHT, nicht, NOT, not
+        </h3>
+        <p>
+            findet alle Treffer, in denen der markierte Suchbegriff nicht vorkommt.
+        </p>
+        <p>
+            Vorsicht: Sie schließen dabei möglicherweise interessante Treffer aus, weil zufällig der Suchbegriff in ihm vorkommt!
+        </p>
+        <h4 class="icon icon-example">
+            Beispiel
+        </h4>
+        <p>
+            Die Eingabe <span class="searchPhrase">volkswirtschaftslehre NOT mankiw findet</span> findet
+        </p>
+        <ul>
+            <li>
+                Ending: Volkswirtschaftslehre – schnell erfasst
+            </li>
+        </ul>
+        <h3>
+            NEAR, Within, Adj
+        </h3>
+        <p>
+            legt die maximalen Abstände zwischen den Suchbegriffen und eventuel ihre Reihenfolge fest. Siehe Hilfetext der Ressourcen!
+        </p>
+        <h4 class="icon icon-example">
+            Beispiele
+        </h4>
+        <p>
+            Die Eingabe <span class="searchPhrase">gesellschaft w/2 medien</span> (w/2 bedeutet, dass nicht mehr als 2 Worte zwischen den Suchbegriffen liegen) findet:
+        </p>
+        <ul>
+            <li>
+                Müller: Gesellschaft und Medien
+            </li>
+            <li>
+                Ziemann: Medien der Gesellschaft – Gesellschaft der Medien
+            </li>
+            <li>
+                Kamps: Die offene Gesellschaft und ihre Medien
+            </li>
+        </ul>
+
+    {{/if}}
+    {{> pageNavigationFull }}
+
+</section>
