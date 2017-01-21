@@ -1,0 +1,59 @@
+<section>
+    {{#with page.[8]}}
+    <h2 class="icon icon-information">{{headline}}</h2>
+    <p>
+        {{preCombination.explanation}}
+    </p>
+    <h4 class="icon icon-example">
+        {{exampleHeadline}}
+    </h4>
+    <ol>
+        {{#each preCombination.exampleResult}}
+        <li class="searchPhrase">
+            {{.}}
+        </li>
+        {{/each}}
+    </ol>
+    <p>
+        {{preCombination.exampleExplanation}}
+    </p>
+    <p>
+        {{postCombination.explanation}}
+    </p>
+
+    <h4 class="icon icon-example">
+        {{exampleHeadline}}
+    </h4>
+    <p>
+        {{exampleIntro}}
+    </p>
+    <ol>
+        {{#each postCombination.exampleResult}}
+        <li>
+            {{.}}
+        </li>
+        {{/each}}
+    </ol>
+    <p>
+        {{postCombination.exampleExplanation}}
+    </p>
+    <ol start="5">
+        {{#each postCombination.exampleCombinationResult}}
+        <li>
+            {{.}}
+        </li>
+        {{/each}}
+    </ol>
+    <p>
+        {{postCombination.exampleFinalCombination}}
+    </p>
+    <ol start="7">
+        {{#each postCombination.exampleFinalCombinationResult}}
+        <li>
+            {{.}}
+        </li>
+        {{/each}}
+    </ol>
+    {{/with}}
+    {{> pageNavigationFull}}
+</section>

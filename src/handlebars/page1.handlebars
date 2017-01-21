@@ -1,29 +1,22 @@
 <section>
-    <h1 class="icon icon-target">{{page.[0].headline}}</h1>
-    {{#if lang.de}}
+    {{#with page.[0]}}
+    <h1 class="icon icon-target">{{headline}}</h1>
     <p>
-        Dieses Grundlagenmodul wird Sie unterstützen, erfolgreicher nach Literatur für Ihr Studium zu recherchieren.
+        {{intro}}
     </p>
     <p>
-        Dabei geht es um folgende Prinzipien und Techniken einer Recherche:
+        {{principles}}
     </p>
     <ul>
-        <li>formale oder inhaltliche Recherchen</li>
-        <li>Trunkieren</li>
-        <li>Verknüpfen</li>
-        <li>Phrase</li>
-        <li>Schlagwort</li>
-        <li>Klassifikation</li>
+        {{#each content}}
+        <li>{{.}}</li>
+        {{/each}}
     </ul>
     <p>
-        Lesen Sie zunächst die Erläuterungen zu jedem Thema. In Anschluss können Sie die Tipps gleich im Recherchecafé* ausprobieren. Aber Achtung! Im Recherchecafé* bekommen Sie nur das,
-        was Sie bestellen, und das ist nicht immer das, was Sie auch wünschen.
-    </p>
+        {{rechercheCafeIntro}}
     <p>
-        * Das Recherchecafé wurde von der Idee des Boole'schen Restaurants inspiriert, vgl. Donald A. Barclay: Teaching the standard features of electronic databases. In: Teaching
-        electronic information literacy : a how-to-do-it manual / ed. by Donald A. Barclay. New York: Neal-Schuman, 1995. S. 65 sowie Detlev Bieler, Thomas Hapke, Oliver Marahrens, TUB
-        Hamburg-Harburg: DISCUS
+        {{rechercheCafeIdee}}
     </p>
-    {{/if}}
-    {{> pageNavigationFull }}
+    {{/with}}
+    {{> pageNavigationFull}}
 </section>

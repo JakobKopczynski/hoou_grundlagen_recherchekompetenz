@@ -1,80 +1,77 @@
-
 <section>
-    {{#if lang.de}}
-    <h2 class="icon icon-information">Trunkieren</h2>
+    {{#with page.[5]}}
+    <h2 class="icon icon-information">{{headline}}</h2>
     <p>
-        Das Trunkierungszeichen (auch Wildcard-Operator, Joker oder Platzhalter genannt) ersetzt bei der Suchanfrage
+        {{intro}}
     </p>
     <ul>
         <li>
-            einen Buchstaben oder
+            {{introList.[0]}}
+        </li>
+        <li class="noBullet">
+            {{or}}
         </li>
         <li>
-            keinen bis zu einer beliebigen Anzahl von Buchstaben
+            {{introList.[1]}}
         </li>
     </ul>
     <p>
-        In den meisten Ressourcen wird das Sternchen (Asterisk, *) verwendet, in anderen !, ?, $ oder #. Prüfen Sie in jeder Ressource in den Hilfetexten, welches Zeichen für welche
-        Abkürzung verwendet wird.
+        {{asterisk}}
     </p>
     <p>
-        In den meisten Ressourcen ist die Rechts- oder Endtrunkierung möglich, in einigen zusätzlich die Links- oder Anfangstrunkierung.
+        {{rightTruncation}}
     </p>
     <h3 class="icon icon-example">
-        Beispiele
+        {{examples}}
     </h3>
     <p>
-        Sie geben in eine Ressource <span class="searchPhrase">me?er</span> ein und erhalten Treffer, in denen folgende Worte vorkommen:
+        {{& exampleSearchQuestionmarkIntro}}
     </p>
     <ul>
         <li>
-            Meier
+            {{exampleSearchQuestionmarkList.[0]}}
         </li>
         <li>
-            Meyer
+            {{exampleSearchQuestionmarkList.[1]}}
+        </li>
+        <li class="noBullet">
+            {{andAlso}}
         </li>
         <li>
-            aber auch Meter
+            {{exampleSearchQuestionmarkList.[2]}}
         </li>
     </ul>
     <p class="extraPaddingBottom">
         <strong>
-            Trunkierungszeichen ? ersetzt einen Buchstaben
+            {{truncationQuestionmarkSummary}}
         </strong>
     </p>
     <p>
-        Die Eingabe <span class="searchPhrase">wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen, z.B.
+        {{& exampleSearchAsteriskIntro}}
     </p>
     <ul>
+        {{#each exampleSearchAsteriskList}}
         <li>
-            Wirtschaft
+            {{.}}
         </li>
-        <li>
-            Wirtschafts-
-        </li>
-        <li>
-            Wirtschaftsrecht
-        </li>
+        {{/each}}
     </ul>
     <p>
-        Eingabe <span class="searchPhrase">*wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen:
+        {{& exampleSearchDoubleAsteriskIntro}}
     </p>
     <ul>
+        {{#each exampleSearchDoubleAsteriskList}}
         <li>
-            Wirtschaft
+            {{.}}
         </li>
-        <li>
-            Betriebswirtschaftslehre
-        </li>
-        <li>
-            Hauswirtschaftlerin
-        </li>
+        {{/each}}
     </ul>
     <p>
         <strong>
-            Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben vor und/oder nach dem von Ihnen eingegebenen Wort.        </strong>
+            {{truncationAsteriskSummary}}
+        </strong>
     </p>
-    {{/if}}
-    {{> pageNavigationFull }}
+    {{/with}}
+    {{> pageNavigationFull}}
 
 </section>

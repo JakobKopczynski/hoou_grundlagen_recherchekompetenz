@@ -25,12 +25,16 @@
     <script src="dependencies/reveal.js/js/reveal.js"></script>
 
     <div class="slides">
+
         {{> page1 }}
+
         <section>
+
             {{> page2 }}
             {{> page3 }}
             {{> page4 }}
             {{> page5 }}
+
         </section>
         <section>
 
@@ -41,75 +45,7 @@
         <section>
 
             {{> page8 }}
-
-            <section>
-                <h2 class="icon icon-information">Verknüpfen mit verschiedenen Operatoren</h2>
-                <p>
-                    Wollen Sie mehr als zwei Suchbegriffe mit unterschiedlichen Operatoren verknüpfen, so müssen Sie Klammern setzen, um deutlich zu machen, in welcher Reihenfolge die Verknüpfungen
-                    abgearbeitet werden sollen.
-                </p>
-                <h4 class="icon icon-example">
-                    Beispiele
-                </h4>
-                <ol>
-                    <li class="searchPhrase">
-                        (qualitätsmanagement ODER qm) UND sozial*
-                    </li>
-                    <li class="searchPhrase">
-                        (qualitätsmanagement ODER qm) UND („soziale arbeit“ ODER sozialarbeit)
-                    </li>
-                </ol>
-                <p>
-                    Damit haben Sie die Suche präkombiniert, d.h. Sie haben die Suche vor der Abfrage vollständig formuliert.
-                </p>
-                <p>
-                    Eine andere Methode ist die Postkoordination: Dabei führen Sie die Abfragen nacheinander einzeln durch, rufen die Suchgeschichte auf und koordinieren die Ergebnisse im Nachhinein.
-                    Manchmal ist es günstiger, die Treffermengen nach und nach einzuschränken.
-                </p>
-
-                <h4 class="icon icon-example">
-                    Beispiele
-                </h4>
-                <p>
-                    Sie führen nacheinander die Suche nach den folgenden Begriffen durch:
-                </p>
-                <ol>
-                    <li>
-                        qualitätsmanagement => Ergebnis 1
-                    </li>
-                    <li>
-                        qm => Ergebnis 2
-                    </li>
-                    <li>
-                        „soziale arbeit“ => Ergebnis 3
-                    </li>
-                    <li>
-                        Sozialarbeit => Ergebnis 4
-                    </li>
-                </ol>
-                <p>
-                    Sie rufen die Suchgeschichte auf und koordinieren diese vier Ergebnisse im Nachhinein:
-                </p>
-                <ol start="5">
-                    <li>
-                        Ergebnis 1 ODER Ergebnis 2 => Ergebnis 5
-                    </li>
-                    <li>
-                        Ergebnis 3 ODER Ergebnis 4 => Ergebnis 6
-                    </li>
-                </ol>
-                <p>
-                    Nun koordinieren Sie auch noch die Ergebnisse der Suchen 5 und 6:
-                </p>
-                <ol>
-                    <li>
-                        Die Postkoordination von Ergebnis 5 UND Ergebnis 6 - => führt zur selben Treffermenge wie die Präkombination im 2. Beispiel oben
-                    </li>
-                </ol>
-                <div class="navigation withPrev withNext"></div>
-
-            </section>
-
+            {{> page9 }}
             {{> page10 }}
             {{> page11 }}
             {{> page12 }}
@@ -118,226 +54,27 @@
 
         </section>
 
-        <section>
-            <h2 class="icon icon-information">Phrasenbildung</h2>
-            <p>
-                Die Phrasensuche kennen Sie aus dem Umgang mit Suchmaschinen: Wenn Sie eine bestimmte Wortfolge in Anführungszeichen setzen, bekommen Sie Treffer, in denen genau diese Wortfolge
-                vorkommt. Wenn Sie die Anführungszeichen weglassen, bekommen Sie hingegen Treffer, in denen die Worte unabhängig von der Reihenfolge vorkommen.
-            </p>
-            <p>
-                Manche Ressourcen erlauben das Setzen eines Trunkierungszeichens (Wildcard-Operator, Joker, Platzhalter, s.o.) innerhalb der Phrasensuche. Es ersetzt dann nicht einen oder mehrere
-                Buchstaben, sondern ein Wort. Es gibt auch gelegentlich Abstandsoperatoren, mit denen Sie den Abstand festlegen können, der maximal zwischen zwei Teilen einer Phrase liegen darf. Bitte
-                lesen Sie die Hilfetexte der jeweiligen Ressource, um diese Suchformulierung zu erfahren.
-            </p>
-            <h4 class="icon icon-example">
-                Beispiele
-            </h4>
-            <p>
-                Mit der Eingabe „grundzüge der volkswirtschaftslehre" im Feld alle Wörter erhalten Sie u.a.
-            </p>
-            <ul>
-                <li>
-                    Mankiw: Grundzüge der Volkswirtschaftslehre
-                </li>
-                <li>
-                    Wienert: Grundzüge der Volkswirtschaftslehre
-                </li>
-                <li>
-                    Hermann: Arbeitsbuch Grundzüge der Volkswirtschaftslehre
-                </li>
-            </ul>
-            <p>
-                Mit der Eingabe „gesellschaft * medien“ erhalten Sie beispielsweise:
-            </p>
-            <ul>
-                <li>
-                    Müller: Gesellschaft und Medien
-                </li>
-                <li>
-                    Ziemann: Medien der Gesellschaft – Gesellschaft der Medien
-                </li>
-                <li>
-                    Gottwald: Alte Gesellschaft – neue Medien
-                </li>
-                <li>
-                    Langenbucher: Gesellschaft, elektronische Medien und Demokratie
-                </li>
-                <li>
-                    <strong>Aber nicht:</strong> Kamps: Die offene Gesellschaft und ihre Medien, wenn * nur ein Wort ersetzt.
-                </li>
-            </ul>
-            <div class="navigation withPrev withNext"></div>
-
-        </section>
+        {{> page15 }}
 
         <section>
-            <section>
-                <h2 class="icon icon-information">Schlagwort</h2>
-                <p>
-                    Manche Ressourcen bieten eine Schlagwortsuche an, auf Englisch werden dafür die Benennungen „Descriptor“, „Subject (Term)“ und gelegentlich „Keyword“ benutzt.
-                </p>
-                <p>
-                    Gemeint ist damit, dass eine Indexiererin oder ein Indexierer den Inhalt eines Dokuments mit Schlagworten beschreibt, die unabhängig von der Terminologie des Dokuments sind. Die
-                    Schlagworte werden einer Wortliste mit kontrolliertem Vokabular (einem Thesaurus) entnommen und sind damit standardisiert. So wird in deutschsprachigen Schlagwortsystemen durchweg
-                    die Einzahl verwendet, in englischsprachigen überwiegend die Mehrzahl. Homonyme werden durch Zusätze eindeutig gemacht („Krebs &lt;Tier&gt;“, „Krebs &lt;Erkrankung&gt;“) und
-                    Synonyme werden vermieden.
-                </p>
-                <p>
-                    Die Suche mit Schlagworten führt zu besseren Ergebnissen, weil nach Inhalten gesucht wird und nicht nach Begriffen, die zufällig auch in dem Dokument vorkommen, aber wenig mit dem
-                    Inhalt des Dokuments zu tun haben.
-                </p>
-                <p>
-                    Welches Schlagwort für welchen Zusammenhang benutzt wird, erfahren Sie beispielsweise, indem Sie mit Stichworten Zufallstreffer erzielen und die Schlagworte, die für diese
-                    Zufallstreffer vergeben wurden, notieren und mit ihnen eine neue Suche starten.
-                </p>
-                <h4 class="icon icon-example">
-                    Beispiele
-                </h4>
-                <p>
-                    Mit der Eingabe <span class="searchPhrase">total quality management</span> im Feld "alle Wörter" finden Sie u.a.
-                </p>
-                <ul>
-                    <li>
-                        Mankiw: Grundzüge der Volkswirtschaftslehre
-                    </li>
-                </ul>
-                <p>
-                    Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld "Schlagwort" finden Sie auch
-                </p>
-                <ul>
-                    <li>
-                        Pfaff: ISO 9001:2008 : Basis für praxisgerechte Managementsysteme
-                    </li>
-                    <li>
-                        Osterhage: Abnahme komplexer Software-Systeme : das Praxishandbuch
-                    </li>
-                    <li>
-                        Feldmann: Montage in der Leistungselektronik für globale Märkte : Design, Konzepte, Strategien
-                    </li>
-                </ul>
-                <div class="navigation withPrev withNext"></div>
 
-            </section>
-
+            {{> page16 }}
             {{> page17 }}
 
-
         </section>
         <section>
-            <section>
-                <h2 class="icon icon-information">Klassifikation</h2>
-                <p>
-                    Manche Ressourcen bieten die Suchmöglichkeit mit der Hilfe einer Klassifikation oder Systematik (classification, subject). Dafür ordnet eine Indexiererin oder ein Indexierer die
-                    Dokumente in Klassen an. Jedes Dokument in einer Klasse hat dabei mindestens ein inhaltliches Merkmal, das es mit allen Dokumenten der Klasse gemeinsam hat und das sich
-                    unterscheidet von den Merkmalen der Dokumente der anderen Klassen. Jede Klasse hat eine eigene Benennung, die mit einer Notation verschlüsselt wird.
-                </p>
-                <p>
-                    Sie kennen Systematiken als Stammbaum in der Biologie und als Aufstellungssystematik in der Bibliothek. Wenn Sie ein Buch im Regal gefunden haben, das inhaltlich Ihren
-                    Vorstellungen entspricht, dann sehen Sie sich auch die Bücher links und rechts von dem gefundenen an, denn die behandeln wahrscheinlich das gleiche Thema.
-                </p>
-                <p>
-                    In einer Bibliothek steht ein Buch immer nur an einer Stelle, auch wenn es inhaltlich an zwei Stellen stehen könnte. In virtuellen Systematiken kann ein Dokument auch mehreren
-                    Klassen zugeordnet werden. Sie suchen mit der Hilfe einer Klassifikation, ähnlich wie mit Schlagworten, nach Inhalten und nicht nach zufälligen Stichworten. Die klassifikatorische
-                    Suche wird zumeist als Unterstützung anderer Recherchen eingesetzt, beispielsweise zur Einschränkung einer großen Treffermenge auf einen fachlichen Zusammenhang.
-                </p>
-                <h4 class="icon icon-example">
-                    Beispiel
-                </h4>
-                <p>
-                    Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld "alle Wörter" finden Sie u.a.
-                </p>
-                <ul>
-                    <li>
-                        Qualitätsmanagement DIN EN ISO 9000 ff : Dokumentensammlung – mit der Signatur „Bwl 024 118“
-                    </li>
-                </ul>
-                <p>
-                    Die Klasse mit der Notation Bwl 024 wurde Qualitätsmanagement benannt. In den Regalen mit der Bezeichnung Bwl 024 finden Sie also Bücher zum gleichen Thema und zwar nur die, die
-                    nicht ausgeliehen sind. Im Katalog können Sie zusätzlich feststellen, welche Bücher zum Thema derzeit ausgeliehen sind.
-                </p>
-                <p>
-                    Mit der Eingabe <span class="searchPhrase">Bwl 024*</span> (Trunkierung) in das Suchfeld "Signatur" erhalten Sie alle Treffer, die der Klasse Qualitätsmanagement zugeordnet wurden,
-                    u.a.
-                </p>
-                <ul>
-                    <li>
-                        Suganthi: Total Quality Management
-                    </li>
-                    <li>
-                        European Foundation for Quality Management: Excellence einführen
-                    </li>
-                    <li>
-                        Loch: Industrial excellence : management quality in manufacturing
-                    </li>
-                </ul>
-                <div class="navigation withPrev withNext"></div>
 
-            </section>
-
+            {{> page18 }}
             {{> page19 }}
 
         </section>
 
         <section>
-            <section>
-                <h2>Danke</h2>
-                <p>
-                    ...und zur Entspannung der Magennerven...
-                </p>
-                <img src="img/greenTea.jpg"/>
-                <h4>
-                    Vielen Dank !
-                </h4>
-                <div class="navigation withPrev withNext"></div>
 
-            </section>
-            <section class="withLogo">
-                <h2>Impressum</h2>
-                <img src="img/Detlev_Dannenberg.jpg"/>
-                <p>
-                    <strong>Detlev Dannenberg</strong><br/>
-                    Hochschule für Angewandte Wissenschaften Hamburg<br/>
-                    Hochschulinformations- und Bibliotheksservice<br/>
-                    E-Mail: detlev.dannenberg(@)haw-hamburg.de
-                </p>
-                <p>
-                    <strong>Projekt:</strong> Hamburg Open Online University
-                </p>
-                <p>
-                    <strong>Autor:</strong> Detlev Dannenberg
-                </p>
-                <p>
-                    <strong>Design:</strong> Stefanie Körner
-                </p>
-                <p>
-                    <strong>Produktion:</strong> Jakob Kopczynski
-                </p>
-                <p>
-                    <strong>Icons:</strong> <a href="http://www.flaticon.com/packs/material-design">Material UI by Google</a>
-                </p>
-                <p>
-                    ursprünglich produziert im Rahmen des Projekts "Competence Cluster Medienkonzeption und netzgestütztes Lehren und Lernen CCM>L", finanziert durch Studiengebühren der Hochschule für
-                    Angewandte Wissenschaften Hamburg.
-                </p>
-                <p>
-                    <strong>CCM>L Projektleiter:</strong> Professor Dr. Wolfgang H. Swoboda, M.A.
-                </p>
-                <p>
-                    <strong>Lizenzen</strong><br/>
-                    <strong>Inhalt:</strong> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a><br/>
-                    <strong>Code:</strong> <a href="https://opensource.org/licenses/MIT">MIT</a>
-                </p>
-                <div class="navigation withPrev withNext"></div>
+            {{> page20 }}
+            {{> page21 }}
+            {{> page22 }}
 
-            </section>
-            <section>
-                <h2>Feedback</h2>
-                <div class="feedbackArea">
-                    <div class="coordinates active">
-
-                    </div>
-                </div>
-            </section>
         </section>
 
     </div>

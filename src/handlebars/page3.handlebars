@@ -1,40 +1,33 @@
 <section>
-    <h2 class="icon icon-example">{{page.[2].headline}}</h2>
-    {{#if lang.de}}
+    {{#with page.[2]}}
+    <h2 class="icon icon-example">{{headline}}</h2>
     <p>
-        In einer Literaturliste finden Sie die Angaben „Nicholas Gregory Mankiw: Grundzüge der Volkswirtschaftslehre. 4. Aufl. Schäffer-Poeschel, 2008“: Im Bibliothekskatalog finden Sie
-        das gewünschte Buch wenn Sie im Feld "alle Wörter" jedes beliebige Stichwort aus diesen Angaben eingeben, z.B.
+        {{intro}}
     </p>
     <ul>
+        {{#each introExamples}}
         <li>
-            Mankiw, Nicholas Gregory
+            {{.}}
         </li>
-        <li>
-            Volkswirtschaftslehre Nicholas
-        </li>
-        <li>
-            volkswirtschaftslehre grundzüge
-        </li>
+        {{/each}}
     </ul>
     <p>
-        Ihr Professor empfiehlt Ihnen in Fragen des bibliothekarischen Grundwissens (z.B. Was ist ein Stichwort?) im „Hacker“ nachzuschlagen: Wenn Sie nun im Bibliothekskatalog "Hacker"
-        über das Feld alle Wörter suchen, werden Sie viele Treffer erzielen, die nichts mit der gesuchten Person zu tun haben, sondern mit IT-Spezialisten.
+        {{professorRecommendation}}
     </p>
     <p>
-        Wenn Sie hingegen im Feld "Person, Autor" den Suchbegriff "Hacker" eingeben, finden Sie nur Bücher, deren Autor ein Mensch namens Hacker ist. – Übrigens: Die meisten Ressourcen
-        verlangen im Feld Autor die Ansetzung „Nachname, Vorname“, also
+        {{authorHacker}}
     </p>
     <ul>
         <li>
-            Mankiw, Nicholas oder
+            {{authorHackerExamples.[0]}}
         </li>
         <li class="noBullet">
-            oder
+            {{or}}
         </li>
         <li>
-            Hacker, Rupert
+            {{authorHackerExamples.[1]}}
         </li>
     </ul>
-    {{/if}}
-    {{> pageNavigationFull }}
+    {{/with}}
+    {{> pageNavigationFull}}
 </section>

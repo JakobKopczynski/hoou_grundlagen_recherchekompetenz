@@ -1,6 +1,11 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+languages = [
+    'de',
+    'en'
+];
+
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-webpack');
@@ -15,7 +20,7 @@ module.exports = function (grunt) {
             compile: {
                 options: {
                     namespace: false,
-                    commonjs : true
+                    commonjs: true
                 },
                 files: {
                     './src/handlebars/compiled/resultCorrect.js': './src/handlebars/resultCorrect.handlebars',
@@ -23,17 +28,18 @@ module.exports = function (grunt) {
                 }
             }
         },
-        clean: ['public/de.html'],
-        'compile-handlebars': {
-            de: {
+        clean: languages.map((language) => `./public/${language}.html`),
+        'compile-handlebars': languages.reduce((accumulator, value)=> {
+            accumulator[value] = {
                 files: [{
                     src: './src/handlebars/main.handlebars',
-                    dest: './public/de.html'
+                    dest: `./public/${value}.html`
                 }],
-                templateData: require('./content/de.js'),
+                templateData: require(`./content/${value}.js`),
                 partials: './src/handlebars/*.handlebars'
-            }
-        },
+            };
+            return accumulator;
+        }, {}),
         watch: {
             compile: {
                 files: [

@@ -1,0 +1,26 @@
+<section>
+    {{#with page.[15]}}
+    <h2 class="icon icon-information">{{headline}}</h2>
+    {{#each intro}}
+    <p>
+        {{.}}
+    </p>
+    {{/each}}
+    <h4 class="icon icon-example">
+        {{exampleHeadline}}
+    </h4>
+    {{#each examples}}
+    <p>
+        {{& intro}}
+    </p>
+    <ul>
+        {{#each result}}
+        <li>
+            {{.}}
+        </li>
+        {{/each}}
+    </ul>
+    {{/each}}
+    {{/with}}
+    {{> pageNavigationFull}}
+</section>
