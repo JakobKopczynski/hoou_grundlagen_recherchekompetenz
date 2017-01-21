@@ -1,6 +1,6 @@
 <div class="resultOverlay wrong">
     <div class="waiter"></div>
-    <div class="feedback">{{exercise.feedbackWrong}}</div>
+    <div class="feedback">{{& exercise.feedbackWrong}}</div>
     {{^exercise.feedbackWrong}}<div class="wrong">{{exercise.wrong}}</div>{{/exercise.feedbackWrong}}
     <div class="retry">{{exercise.retry}}</div>
 </div>
