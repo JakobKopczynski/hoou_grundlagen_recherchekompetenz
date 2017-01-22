@@ -298,10 +298,23 @@ module.exports = {
             headline: `Übung - Postkoordination`,
             explanation: `Sie erinnern sich: Bei der Postkoordination führen Sie die einzelnen Suchen nacheinander aus und schränken die Treffermenge dann nach und nach ein. Sie wünschen Kaffee oder Mokka mit Sahne oder Obers.`,
             tasks: [
-                `Sie bestellen zunächst mit der Eingabe <span class="searchPhrase">kaffee</span>.`,
-                `Im nächsten Schritt Ihrer Bestellung markieren Sie nun zusätzlich alles, was Sie mit der Eingabe <span class="searchPhrase">mokka</span> bekommen.`,
-                `Im nächsten Schritt Ihrer Bestellung markieren Sie nun zusätzlich zur bestehenden Auswahl kaffee ODER mokka, was Sie mit der Eingabe <span class="searchPhrase">sahne</span> bekommen.`,
-                `Im nächsten Schritt Ihrer Bestellung markieren Sie nun zusätzlich zur bestehenden Auswahl, was Sie mit der Eingabe <span class="searchPhrase">obers</span> bekommen.`
+                {
+                    task: `Sie bestellen zunächst mit der Eingabe <span class="searchPhrase">kaffee</span>.`,
+                    wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie in diesem Schritt für die Eingabe von kaffee 9 Spezialitäten von unserer Karte.`,
+                    correct: `Richtig! Führen Sie nun die nächste Eingabe aus.`
+                }, {
+                    task: `Im nächsten Schritt Ihrer Bestellung markieren Sie nun zusätzlich alles, was Sie mit der Eingabe <span class="searchPhrase">mokka</span> bekommen.`,
+                    wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie in diesem Schritt für die zusätzliche Eingabe von mokka 4 zusätzliche Spezialitäten von unserer Karte.`,
+                    correct: `Richtig! Führen Sie nun die nächste Eingabe aus.`
+                }, {
+                    task: `Im nächsten Schritt Ihrer Bestellung markieren Sie nun zusätzlich zur bestehenden Auswahl kaffee ODER mokka, was Sie mit der Eingabe <span class="searchPhrase">sahne</span> bekommen.`,
+                    wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie in diesem Schritt für die Eingabe von sahne 2 Spezialitäten von unserer Karte.`,
+                    correct: `Richtig! Führen Sie nun die nächste Eingabe aus.`
+                }, {
+                    task: `Im nächsten Schritt Ihrer Bestellung markieren Sie nun zusätzlich zur bestehenden Auswahl, was Sie mit der Eingabe <span class="searchPhrase">obers</span> bekommen.`,
+                    wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie in diesem Schritt für die Eingabe von obers 2 Spezialitäten von unserer Karte.`,
+                    correct: `Richtig! Sie haben nun alle Eingaben einzeln nacheinander ausgeführt. Es ist an der Zeit, diese nun zu koordinieren.`
+                }
             ]
         },
         { //page15
@@ -352,6 +365,7 @@ module.exports = {
         },
         {//page17
             headline: `Übung`,
+            wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie mit der Schlagwort = Kaffee UND Schlagwort = Glas 4 Spezialitäten von unserer Karte.`,
             explanation: `Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Schlagwort = Kaffee UND Schlagwort = Glas</span>.`
         },
         {//page18
@@ -384,9 +398,20 @@ module.exports = {
             headline: `Übung`,
             explanation: ` Markieren Sie nun für folgende Spezialität die richtige Klasse:`,
             tasks: [
-                `<b>Türk Kahvesi</b> - <i>feinst gemahlener Kaffee, mit Zucker im Kupferkännchen aufgekocht</i>`,
-                `<b>Wiener Eiskaffee</b> - <i>köstliches Vanilleeis, doppelter Mokka, Schlagobershaube, Kaffeebohne und Hohlhippe</i>`,
-                `<b>Fiaker</b> - <i>Doppelmokka im Henkelglas mit einem Schuss Kirschwasser gespritzt, mit Schlagobershaube und Cocktailkirsche</i>`
+                {
+                    task: `<b>Türk Kahvesi</b> - <i>feinst gemahlener Kaffee, mit Zucker im Kupferkännchen aufgekocht</i>`,
+                    wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Die Spezialität ist genau einer richtigen Klasse zuzuordnen.`,
+                    correct: `Richtig! Dann schauen wir mal, ob Sie auch die folgende Spezialität der richtigen Klasse zuordnen können.`
+                },
+                {
+                    task: `<b>Wiener Eiskaffee</b> - <i>köstliches Vanilleeis, doppelter Mokka, Schlagobershaube, Kaffeebohne und Hohlhippe</i>`,
+                    wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Die Spezialität ist genau einer richtigen Klasse zuzuordnen.`,
+                    correct: `Richtig! Dann schauen wir mal, ob Sie auch die folgende Spezialität der richtigen Klasse zuordnen können.`
+                },
+                {
+                    task: `<b>Fiaker</b> - <i>Doppelmokka im Henkelglas mit einem Schuss Kirschwasser gespritzt, mit Schlagobershaube und Cocktailkirsche</i>`,
+                    wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Die Spezialität ist genau einer richtigen Klasse zuzuordnen.`
+                }
             ]
         },
         {//page20
@@ -404,11 +429,11 @@ module.exports = {
             iconsTitle: `Icons:`,
             iconsContent: `<a href="http://www.flaticon.com/packs/material-design">Material UI by Google</a>`,
             origin: ` ursprünglich produziert im Rahmen des Projekts "Competence Cluster Medienkonzeption und netzgestütztes Lehren und Lernen CCM>L", finanziert durch Studiengebühren der Hochschule für Angewandte Wissenschaften Hamburg.`,
-            license : {
+            license: {
                 header: `Lizenzen`,
                 contentTitle: `Inhalt:`,
                 contentContent: `<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a><br/>`,
-                codeTitle : `Code:`,
+                codeTitle: `Code:`,
                 codeContent: `<a href="https://opensource.org/licenses/MIT">MIT</a>`
             }
         },

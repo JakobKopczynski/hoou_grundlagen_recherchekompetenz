@@ -2,7 +2,10 @@
     <h2 class="icon icon-exercise">{{page.[13].headline}}</h2>
     <p>{{exercise.info}}</p>
     <p></p>
-    <form class="exercise" data-incremental-exercise="2;4">
+    <form
+            class="exercise"
+            data-incremental-exercise="2;4"
+    >
         <table>
             <thead>
             <tr>
@@ -10,7 +13,9 @@
                     {{& page.[13].explanation}}
                     <br/>
                     {{#each page.[13].tasks}}
-                    <span class="exercise">{{& .}}</span>
+                    <span class="exercise" {{#if wrong}} data-feedback-wrong="{{wrong}}" {{/if}}{{#if correct}} data-feedback-correct="{{correct}}"{{/if}}>
+                    {{& task}}
+                    </span>
                     {{/each}}
                     <br/>
                     {{exercise.pleaseOrder}}
@@ -23,7 +28,7 @@
             </thead>
 
             {{#with exercise.drinks}}
-            
+
             <tr class="elem">
                 <td>{{cafeAuLait.title}}</td>
                 <td class="check">
@@ -231,9 +236,6 @@
             </tr>
             </tfoot>
         </table>
-        <br/>
-
-
     </form>
     {{> pageNavigationFull}}
 

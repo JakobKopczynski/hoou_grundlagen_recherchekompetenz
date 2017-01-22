@@ -104,11 +104,11 @@ module.exports = function (grunt) {
                     ]
                 },
                 stats: {
-                    colors: false,
+                    colors: true,
                     modules: false,
                     reasons: true
                 },
-                progress: false,
+                progress: true,
                 failOnError: false,
                 watch: false,
                 keepalive: false

@@ -160,22 +160,15 @@ div.reveal {
         padding-left: 0px;
 
         div.resultOverlay {
-
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          width: 100%;
           background-size: contain;
           border-radius: 20px;
           cursor: pointer;
 
           &.correct {
             background: rgba(146, 208, 80, 1);
-            border: rgba(146, 208, 80, 1) 2px solid;
           }
           &.wrong {
             background: rgba(255, 0, 0, 1);
-            border: rgba(255, 0, 0, 1) 2px solid;
           }
 
           div {
@@ -215,8 +208,8 @@ div.reveal {
             }
 
             &.retry, &.next {
-              top: 400px;
-              left: 700px;
+              bottom: 60px;
+              right: 40px;
             }
 
             &.correct, &.wrong {

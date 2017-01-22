@@ -12,7 +12,9 @@
                     {{& page.[18].explanation}}
                     <br/>
                     {{#each page.[18].tasks}}
-                    <span class="exercise">{{& .}}</span>
+                    <span class="exercise" {{#if wrong}} data-feedback-wrong="{{wrong}}" {{/if}}{{#if correct}} data-feedback-correct="{{correct}}"{{/if}}>
+                    {{& task}}
+                    </span>
                     {{/each}}
                     <div class="exerciseProgress"></div>
                 </th>
@@ -224,9 +226,6 @@
             </tr>
             </tfoot>
         </table>
-        <br/>
-
-
     </form>
     {{> pageNavigationFull}}
 

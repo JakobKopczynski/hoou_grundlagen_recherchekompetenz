@@ -3,6 +3,7 @@
     <p>{{exercise.info}}</p>
     <p></p>
 
+    <form class="exercise"{{#with page.[16]}}{{#if wrong}} data-feedback-wrong="{{wrong}}" {{/if}}{{#if correct}} data-feedback-correct="{{correct}}"{{/if}}{{/with}}>
     <form class="exercise">
 
         <table>
@@ -147,9 +148,6 @@
             </tr>
             </tfoot>
         </table>
-        <br/>
-
-
     </form>
     {{> pageNavigationFull}}
 

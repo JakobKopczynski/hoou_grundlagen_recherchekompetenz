@@ -47,7 +47,7 @@
             }
         };
 
-        var templateData = deepmerge(genericTempateData, exerciseTemplateData);
+        var templateDataExerciseGroup = deepmerge(genericTempateData, exerciseTemplateData);
 
         $elements.on('click', onLineClick);
 
@@ -187,10 +187,33 @@
             }
         }
 
+        function getFeedbackTemplateData() {
+
+            var exerciseTemplateData = {exercise: {}};
+            var exercises = $container.find('thead span.exercise');
+
+            if (!exercises.length) {
+                return templateDataExerciseGroup;
+            }
+
+            var exercise = $(exercises.get(currentExercise));
+            var feedbackCorrect = exercise.data('feedbackCorrect');
+            var feedbackWrong = exercise.data('feedbackWrong');
+
+            if (feedbackCorrect) {
+                exerciseTemplateData.exercise.feedbackCorrect = feedbackCorrect;
+            }
+            if (feedbackWrong) {
+                exerciseTemplateData.exercise.feedbackWrong = feedbackWrong;
+            }
+
+            return deepmerge(templateDataExerciseGroup, exerciseTemplateData);
+        }
+
         function showCorrectResult() {
 
             var $table = $container.find('table');
-            var $goodOverlay = jQuery(templates.resultCorrect(templateData))
+            var $goodOverlay = jQuery(templates.resultCorrect(getFeedbackTemplateData()))
                 .on('click', function () {
                     var anotherExercise;
                     if (incrementalExercise || multiExercise) {
@@ -201,25 +224,29 @@
                     if (!anotherExercise) {
                         finishedExercise();
                     }
+                    $table.show();
                     $goodOverlay.remove();
                 })
                 .css({
                     height: ($table.height()) + 'px'
                 })
                 .appendTo($container);
+            $table.hide();
         }
 
         function showBadResult() {
 
             var $table = $container.find('table');
-            var $badOverlay = jQuery(templates.resultWrong(templateData))
+            var $badOverlay = jQuery(templates.resultWrong(getFeedbackTemplateData()))
                 .on('click', function () {
+                    $table.show();
                     $badOverlay.remove();
                 })
                 .css({
                     height: ($table.height()) + 'px'
                 })
                 .appendTo($container);
+            $table.hide();
         }
     }
 })();
