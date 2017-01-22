@@ -50,11 +50,19 @@ function setupFeedbackChart($container) {
         y = y > 100 ? 100 : y;
 
         addCoordinateOnGraph(x, y, 'my');
-        sendFeedback(x, y);
+        confirmFeedback(x, y);
 
         $this.removeClass('active');
 
-    })
+    });
+
+    function confirmFeedback(x,y) {
+        
+        //get the "my" box
+        var $myBox = $coordinates.find('.my');
+jQuery('<div class="arrow_box"/>').appendTo($myBox);
+        //sendFeedback(x, y);
+    }
 
 }
 

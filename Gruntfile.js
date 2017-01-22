@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 languages = [
     'de',
@@ -73,12 +74,17 @@ module.exports = function (grunt) {
                     filename: 'js/module.js'
                 },
                 plugins: [
-                    new webpack.optimize.DedupePlugin(),
-                    new webpack.optimize.UglifyJsPlugin(),
+                    // new webpack.optimize.DedupePlugin(),
+                    // new webpack.optimize.UglifyJsPlugin(),
                     new ExtractTextPlugin('style.css', {
                         allChunks: true
                     })
                 ],
+                postcss: function () {
+                    return [autoprefixer({
+                        browsers: ['ie 9', 'last 5 versions']
+                    })];
+                },
                 module: {
                     loaders: [
                         {
@@ -91,7 +97,7 @@ module.exports = function (grunt) {
                         },
                         {
                             test: /\.scss$/,
-                            loader: ExtractTextPlugin.extract('css!sass')
+                            loaders: ['style', ExtractTextPlugin.extract('css!postcss!sass')]
                         },
                         {
                             test: /\.(png|gif)$/,

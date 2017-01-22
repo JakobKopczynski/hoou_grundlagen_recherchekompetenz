@@ -165,10 +165,10 @@ div.reveal {
           cursor: pointer;
 
           &.correct {
-            background: rgba(146, 208, 80, 1);
+            background: rgb(146, 208, 80);
           }
           &.wrong {
-            background: rgba(255, 0, 0, 1);
+            background: rgb(232, 84, 84);
           }
 
           div {

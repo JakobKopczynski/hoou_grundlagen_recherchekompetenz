@@ -102,7 +102,7 @@ module.exports = {
     },
     page: [
         { //page1
-            headline: `Lernziele`,
+            headline: `Learning Objectives`,
             intro: `Dieses Grundlagenmodul wird Sie unterstützen, erfolgreicher nach Literatur für Ihr Studium zu recherchieren.`,
             principles: `Dabei geht es um folgende Prinzipien und Techniken einer Recherche:`,
             content: [
