@@ -427,7 +427,7 @@ module.exports = {
             designTitle: `Design:`,
             productionTitle: `Produktion:`,
             iconsTitle: `Icons:`,
-            iconsContent: `<a href="http://www.flaticon.com/packs/material-design">Material UI by Google</a>`,
+            iconsContent: `CC 3.0 BY <a href="http://www.flaticon.com/packs/material-design">Material UI by Google</a>`,
             origin: ` ursprünglich produziert im Rahmen des Projekts "Competence Cluster Medienkonzeption und netzgestütztes Lehren und Lernen CCM>L", finanziert durch Studiengebühren der Hochschule für Angewandte Wissenschaften Hamburg.`,
             license: {
                 header: `Lizenzen`,

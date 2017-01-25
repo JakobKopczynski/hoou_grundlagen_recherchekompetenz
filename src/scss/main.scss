@@ -34,6 +34,7 @@ div.reveal {
     margin-top: 12px;
     margin-bottom: 12px;
   }
+
   .searchPhrase {
     background-color: #ddd;
     font-weight: bold;
@@ -140,6 +141,7 @@ div.reveal {
   li.noBullet {
     list-style-type: none;
   }
+
   div.slides {
     font-size: 50%;
     margin: 0px;
@@ -325,7 +327,18 @@ div.reveal {
     }
   }
 
-  img.nav-flag {
-    width: 30px;
+  .slide-menu {
+    i.fa {
+      float: left;
+      padding-right: 8px;
+    }
+    .slide-menu-item-title {
+      margin-left: 25px;
+      display: block;
+    }
+
+    img.nav-flag {
+      width: 30px;
+    }
   }
 }
