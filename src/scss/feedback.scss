@@ -1,81 +1,122 @@
-.feedbackArea .coordinates {
+.feedbackArea {
 
-  border-left: 3px solid black;
-  border-bottom: 3px solid black;
-  //background-color: lightgrey;
-  //background: linear-gradient(60deg, rgb(232, 84, 84), rgb(146, 208, 80), rgb(146, 208, 80));
-  background: linear-gradient(60deg, rgb(232, 84, 84), rgb(146, 208, 80));
-  width: 600px;
-  height: 300px;
-  position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    transform: rotate(45deg);
-    left: -13px;
-    top: 3px;
-    border-top: 2px solid black;
-    border-left: 2px solid black;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    transform: rotate(45deg);
-    right: 3px;
-    bottom: -13px;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-  }
-
-  &.active {
-    cursor: crosshair;
-  }
-
-  .coordinate {
-    height: 8px;
-    width: 8px;
-    background: black;
-    position: absolute;
-    border-radius: 4px;
-
-    &.my {
-      background: blue;
-    }
-  }
-
-  .arrow_box {
+  > .enjoyed {
+    float: left;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    top: 230px;
+    left: 10px;
     position: relative;
-    background: #88b7d5;
-    border: 4px solid #c2e1f5;
-  }
-  .arrow_box:after, .arrow_box:before {
-    left: 100%;
-    top: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
   }
 
-  .arrow_box:after {
-    border-color: rgba(136, 183, 213, 0);
-    border-left-color: #88b7d5;
-    border-width: 30px;
-    margin-top: -30px;
-  }
-  .arrow_box:before {
-    border-color: rgba(194, 225, 245, 0);
-    border-left-color: #c2e1f5;
-    border-width: 36px;
-    margin-top: -36px;
+  > .learned {
+    width: 600px;
+    text-align: center;
+    padding-left: 40px;
+    padding-top: 10px;
   }
 
+  .coordinates {
+
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    //background-color: lightgrey;
+    background: linear-gradient(60deg, rgb(232, 84, 84), rgb(146, 208, 80));
+    width: 600px;
+    height: 300px;
+    left: 40px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      transform: rotate(45deg);
+      left: -13px;
+      top: 3px;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      transform: rotate(45deg);
+      right: 3px;
+      bottom: -13px;
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+    }
+
+    &.active {
+      cursor: crosshair;
+    }
+
+    .coordinate {
+      height: 8px;
+      width: 8px;
+      background: black;
+      position: absolute;
+      border-radius: 4px;
+
+      &.my {
+        background: blue;
+      }
+    }
+
+    .confirmFeedback {
+      position: relative;
+      background: #88b7d5;
+      border: 4px solid #c2e1f5;
+      padding: 8px;
+      width: 200px;
+      height: 40px;
+      border-radius: 6px;
+      left: -240px;
+      top: -29px;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        margin: 4px;
+        padding-left: 35px;
+        &.no {
+          background: url('../../public/img/error.png') no-repeat left 4px center;
+        }
+        &.yes {
+          background: url('../../public/img/success.png') no-repeat left 4px center;
+        }
+      }
+
+    }
+    .confirmFeedback:after, .confirmFeedback:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .confirmFeedback:after {
+      border-color: rgba(136, 183, 213, 0);
+      border-left-color: #88b7d5;
+      border-width: 15px;
+      margin-top: -15px;
+    }
+    .confirmFeedback:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-left-color: #c2e1f5;
+      border-width: 17px;
+      margin-top: -17px;
+    }
+
+  }
 }

@@ -1,7 +1,19 @@
-var FEEDBACK_GET_URL = 'feedbackDataSample/sample.json';
-var FEEDBACK_SET_URL = '';
+//the storage connector. Can easily be replaced with something else, like ajax
+var storage = require('./feedbackStorage/baqend');
 
-function setupFeedbackChart($container) {
+//templating
+var Handlebars = require('handlebars/runtime');
+var templates = {
+    confirmBox: require('../handlebars/compiled/confirmBox.js')(Handlebars)
+};
+
+var templateData = require('../../content/' + $('html').attr('lang') + '.js').feedbackConfirmBox;
+
+/**
+ * extend a container into a feedback box
+ * @param $container
+ */
+module.exports = function setupFeedbackChart($container) {
 
     var $container = jQuery($container);
     var $coordinates = $container.children('.coordinates');
@@ -9,9 +21,20 @@ function setupFeedbackChart($container) {
     var height = $coordinates.height();
     var widthRatio = width / 100;
     var heightRatio = height / 100;
+    // var templateData = {
+    //     no : $container.data('no'),
+    //     yes : $container.data('yes')
+    // };
 
+
+    /**
+     * draw a coordinate pair on the graph
+     * @param x
+     * @param y
+     * @param additionalClass (optional)
+     */
     function addCoordinateOnGraph(x, y, additionalClass) {
-        console.log(x, y);
+
         var $elem = jQuery('<div class="coordinate"/>')
             .css({
                 left: x * widthRatio - 4,
@@ -20,59 +43,85 @@ function setupFeedbackChart($container) {
             .appendTo($coordinates);
 
         if (additionalClass) {
-            debugger;
             $elem.addClass(additionalClass);
         }
     }
 
-    jQuery.get(FEEDBACK_GET_URL)
-        .done(function (data) {
-            data.forEach(function (data) {
-                addCoordinateOnGraph(data.x, data.y);
-            })
+
+    /**
+     * activate the feedback box
+     */
+    function activeFeedbackBox() {
+
+        $coordinates.addClass('active');
+        $coordinates.one('click', function (e) {
+            var $this = jQuery(this); // or use $(e.target) in some cases;
+            var offset = $this.offset();
+
+            var posX = offset.left;
+            var posY = offset.top;
+
+            var x = e.pageX - posX;
+            x = parseInt(x / width * 100, 10);
+            x = x < 0 ? 0 : x;
+            x = x > 100 ? 100 : x;
+
+            var y = e.pageY - posY;
+            y = parseInt(y / height * 100, 10);
+            y = y < 0 ? 0 : y;
+            y = y > 100 ? 100 : y;
+
+            addCoordinateOnGraph(x, y, 'my');
+            confirmFeedback(x, y);
+
+            $this.removeClass('active');
+
         });
+    }
 
-    $coordinates.one('click', function (e) {
-        var $this = jQuery(this); // or use $(e.target) in some cases;
-        var offset = $this.offset();
 
-        var posX = offset.left;
-        var posY = offset.top;
+    /**
+     * show feedback dialog and handle click on yes and no
+     * @param x
+     * @param y
+     */
+    function confirmFeedback(x, y) {
 
-        var x = e.pageX - posX;
-        x = parseInt(x / width * 100, 10);
-        x = x < 0 ? 0 : x;
-        x = x > 100 ? 100 : x;
+        // get the "my" box
+        var $myCoordinates = $coordinates.find('.my');
+        var $confirmBox = jQuery(templates.confirmBox(templateData));
+        $confirmBox.find('.yes').on('click', function () {
+            storage.add(x, y);
+            $myCoordinates.removeClass('my');
+            $confirmBox.remove();
+            return false;
+        });
+        $confirmBox.find('.no').on('click', function () {
+            removeMyCoordinates();
+            activeFeedbackBox();
+            $confirmBox.remove();
+            return false;
+        });
+        $confirmBox.appendTo($myCoordinates);
+    }
 
-        var y = e.pageY - posY;
-        y = parseInt(y / height * 100, 10);
-        y = y < 0 ? 0 : y;
-        y = y > 100 ? 100 : y;
 
-        addCoordinateOnGraph(x, y, 'my');
-        confirmFeedback(x, y);
+    /**
+     * removing the user coordinate, if it doesn't get confirmed
+     */
+    function removeMyCoordinates() {
+        $coordinates.find('.my').remove();
+    }
 
-        $this.removeClass('active');
 
+    // get initial data
+    storage.get().then(function (data) {
+        data.forEach(function (data) {
+            addCoordinateOnGraph(data.x, data.y);
+        });
     });
 
-    function confirmFeedback(x,y) {
-        
-        //get the "my" box
-        var $myBox = $coordinates.find('.my');
-jQuery('<div class="arrow_box"/>').appendTo($myBox);
-        //sendFeedback(x, y);
-    }
+    //and activate it
+    activeFeedbackBox();
 
-}
-
-function sendFeedback(x, y) {
-    if (FEEDBACK_SET_URL) {
-        jQuery.post(FEEDBACK_SET_URL, {x: x, y: y})
-            .done(function (data) {
-
-            })
-    }
-}
-
-module.exports = setupFeedbackChart;
+};

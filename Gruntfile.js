@@ -18,14 +18,15 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         handlebars: {
-            compile: {
+            runtime: {
                 options: {
                     namespace: false,
                     commonjs: true
                 },
                 files: {
                     './src/handlebars/compiled/resultCorrect.js': './src/handlebars/resultCorrect.handlebars',
-                    './src/handlebars/compiled/resultWrong.js': './src/handlebars/resultWrong.handlebars'
+                    './src/handlebars/compiled/resultWrong.js': './src/handlebars/resultWrong.handlebars',
+                    './src/handlebars/compiled/confirmBox.js': './src/handlebars/confirmBox.handlebars'
                 }
             }
         },
@@ -47,7 +48,7 @@ module.exports = function (grunt) {
                     './src/handlebars/**/*.handlebars',
                     './content/**/*.*'
                 ],
-                tasks: ['handlebars', 'compile'],
+                tasks: ['handlebars', 'compile', 'webpack'],
                 options: {
                     spawn: true
                 }
@@ -73,9 +74,10 @@ module.exports = function (grunt) {
                     path: './public/',
                     filename: 'js/module.js'
                 },
+                devtool: 'inline-source-map',
                 plugins: [
-                    // new webpack.optimize.DedupePlugin(),
-                    // new webpack.optimize.UglifyJsPlugin(),
+                    new webpack.optimize.DedupePlugin(),
+                    new webpack.optimize.UglifyJsPlugin(),
                     new ExtractTextPlugin('style.css', {
                         allChunks: true
                     })

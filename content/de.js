@@ -437,8 +437,14 @@ module.exports = {
                 codeContent: `<a href="https://opensource.org/licenses/MIT">MIT</a>`
             }
         },
-        {//page21
-            headline: `Feedback`
+        {//page22
+            headline: `Feedback`,
+            enjoyed: `Ich habe Spaß gehabt`,
+            learned: `Ich habe etwas gelernt`
         }
-    ]
+    ],
+    feedbackConfirmBox: {
+        yes: `Bestätigen`,
+        no: `Nein, doch nicht`
+    }
 };

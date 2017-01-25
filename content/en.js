@@ -1,6 +1,6 @@
 module.exports = {
     lang: {
-        de: `de`
+        en: `en`
     },
     exercise: {
         info: `Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.`,
@@ -437,8 +437,14 @@ module.exports = {
                 codeContent: `<a href="https://opensource.org/licenses/MIT">MIT</a>`
             }
         },
-        {//page21
-            headline: `Feedback`
+        {//page22
+            headline: `Feedback`,
+            enjoyed: `Ich habe Spaß gehabt`,
+            learned: `Ich habe etwas gelernt`
         }
-    ]
+    ],
+    feedbackConfirmBox: {
+        yes: `Bestätigen`,
+        no: `Nein, doch nicht`
+    }
 };

@@ -1,9 +1,14 @@
 <section>
     {{#with page.[21]}}
     <h2>{{headline}}</h2>
-    <div class="feedbackArea">
-        <div class="coordinates active">
-
+    <div class="feedbackArea" data-no="{{no}}" data-yes="{{yes}}">
+        <div class="enjoyed">
+            {{enjoyed}}
+        </div>
+        <div class="coordinates">
+        </div>
+        <div class="learned">
+            {{learned}}
         </div>
     </div>
     {{/with}}
