@@ -20,4 +20,4 @@ It is just plain HTML/JS/CSS, so use your preferred server or hoster.
 
 * Code: MIT
 * Content: CC BY-NC-SA 3.0
-* Icons CC 3.0 BY [Material UI by Google](http://www.flaticon.com/packs/material-design),
+* Icons CC 3.0 BY [Material UI by Google](http://www.flaticon.com/packs/material-design)
