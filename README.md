@@ -16,6 +16,19 @@ It is just plain HTML/JS/CSS, so use your preferred server or hoster.
 1. clone or download the repo
 1. make the "public" folder accessible
 
+## Translate it
+
+1. copy one of the existing languages in /content
+1. translate it
+1. add the language to ./Gruntfile.js
+1. optional (make the translation accessable in the navigation in ./src/main.js
+
+## Data Storage for feedback
+
+in /js/feedbackStorage are two sample implementations
+* ajax.js - Get feedback data from and send feedback data to an HTTP Endpoint
+* baqend.js - Implementation for a public BaaS. [Baqend](https://www.baqend.com/)
+
 ## License
 
 * Code: MIT
