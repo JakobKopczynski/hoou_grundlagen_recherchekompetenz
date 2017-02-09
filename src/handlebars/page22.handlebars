@@ -1,15 +1,41 @@
-<section>
+<section class="withLogo">
     {{#with page.[21]}}
     <h2>{{headline}}</h2>
-    <div class="feedbackArea" data-no="{{no}}" data-yes="{{yes}}">
-        <div class="enjoyed">
-            {{enjoyed}}
-        </div>
-        <div class="coordinates">
-        </div>
-        <div class="learned">
-            {{learned}}
-        </div>
-    </div>
+    <img src="img/Detlev_Dannenberg.jpg"/>
+    <p>
+        <strong>Detlev Dannenberg</strong><br/>
+        Hochschule für Angewandte Wissenschaften Hamburg<br/>
+        Hochschulinformations- und Bibliotheksservice<br/>
+        {{email}}: detlev.dannenberg(@)haw-hamburg.de
+    </p>
+    <p>
+        <strong>{{projectTitle}}</strong> Hamburg Open Online University
+    </p>
+    <p>
+        <strong>{{authorTitle}}</strong> Detlev Dannenberg
+    </p>
+    <p>
+        <strong>{{designTitle}}</strong> Stefanie Körner
+    </p>
+    <p>
+        <strong>{{productionTitle}}</strong> Jakob Kopczynski
+    </p>
+    <p>
+        <strong>{{iconsTitle}}</strong> {{& iconsContent}}
+    </p>
+    <p>
+        {{origin}}
+    </p>
+    <p>
+        <strong>CCM>L Projektleiter:</strong> Professor Dr. Wolfgang H. Swoboda, M.A.
+    </p>
+    <p>
+        {{#with license}}
+        <strong>{{header}}</strong><br/>
+        <strong>{{contentTitle}}</strong> {{& contentContent}}
+        <strong>{{codeTitle}}</strong> {{& codeContent}}
+        {{/with}}
+    </p>
     {{/with}}
+    {{> pageNavigationFull}}
 </section>

@@ -4,7 +4,7 @@
     float: left;
     transform: rotate(-90deg);
     transform-origin: 0 0;
-    top: 230px;
+    top: 400px;
     left: 10px;
     position: relative;
   }
@@ -16,14 +16,33 @@
     padding-top: 10px;
   }
 
+  > .bad {
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+    top: 656px;
+    left: 80px;
+    position: absolute;
+  }
+
+  > .goodX {
+    top: 670px;
+    left: 650px;
+    position: absolute;
+  }
+
+  > .goodY {
+    top: 75px;
+    left: 30px;
+    position: absolute;
+  }
+
   .coordinates {
 
     border-left: 3px solid black;
     border-bottom: 3px solid black;
-    //background-color: lightgrey;
     background: linear-gradient(60deg, rgb(232, 84, 84), rgb(146, 208, 80));
     width: 600px;
-    height: 300px;
+    height: 600px;
     left: 40px;
     position: relative;
 

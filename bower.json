@@ -17,6 +17,6 @@
   ],
   "dependencies": {
     "reveal.js-menu": "PascalPflaum/reveal.js-menu#711cf7b8169b192be070de7173a4db682c69c398",
-    "reveal.js": "PascalPflaum/reveal.js#273f68071c04b8e25da758cfcccd19bb223cb244"
+    "reveal.js": "3.4.1"
   }
 }

@@ -1,41 +1,24 @@
-<section class="withLogo">
+<section>
     {{#with page.[20]}}
     <h2>{{headline}}</h2>
-    <img src="img/Detlev_Dannenberg.jpg"/>
-    <p>
-        <strong>Detlev Dannenberg</strong><br/>
-        Hochschule für Angewandte Wissenschaften Hamburg<br/>
-        Hochschulinformations- und Bibliotheksservice<br/>
-        {{email}}: detlev.dannenberg(@)haw-hamburg.de
-    </p>
-    <p>
-        <strong>{{projectTitle}}</strong> Hamburg Open Online University
-    </p>
-    <p>
-        <strong>{{authorTitle}}</strong> Detlev Dannenberg
-    </p>
-    <p>
-        <strong>{{designTitle}}</strong> Stefanie Körner
-    </p>
-    <p>
-        <strong>{{productionTitle}}</strong> Jakob Kopczynski
-    </p>
-    <p>
-        <strong>{{iconsTitle}}</strong> {{& iconsContent}}
-    </p>
-    <p>
-        {{origin}}
-    </p>
-    <p>
-        <strong>CCM>L Projektleiter:</strong> Professor Dr. Wolfgang H. Swoboda, M.A.
-    </p>
-    <p>
-        {{#with license}}
-        <strong>{{header}}</strong><br/>
-        <strong>{{contentTitle}}</strong> {{& contentContent}}
-        <strong>{{codeTitle}}</strong> {{& codeContent}}
-        {{/with}}
-    </p>
+    <div class="feedbackArea" data-no="{{no}}" data-yes="{{yes}}">
+        <div class="enjoyed">
+            {{enjoyed}}
+        </div>
+        <div class="bad">
+            {{bad}}
+        </div>
+        <div class="goodX">
+            {{good}}
+        </div>
+        <div class="goodY">
+            {{good}}
+        </div>
+        <div class="coordinates">
+        </div>
+        <div class="learned">
+            {{learned}}
+        </div>
+    </div>
     {{/with}}
-    {{> pageNavigationFull}}
 </section>

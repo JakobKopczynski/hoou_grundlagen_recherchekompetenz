@@ -207,7 +207,7 @@ module.exports = {
             },
             orOperators: {
                 headline: `/, ODER, oder, OR, or`,
-                explanation: `findet alle Treffer, in denen mindestens ein Suchbegriff vorkommt.`,
+                explanation: `Dieser Verknüpfungsoperator findet alle Treffer, in denen mindestens ein Suchbegriff vorkommt.`,
                 attention: `Achtung!`,
                 attentionText: `Anders als im normalen Sprachgebrauch handelt es sich hier nicht um ein exklusives ODER („Christin oder Jakob machen den Abwasch“), sondern um ein inklusives ODER („Christin oder Jakob oder beide …“)!`,
                 exampleHeadline: `Beispiel`,
@@ -220,17 +220,17 @@ module.exports = {
             },
             notOperators: {
                 headline: `-, NICHT, nicht, NOT, not`,
-                explanation: `findet alle Treffer, in denen der markierte Suchbegriff nicht vorkommt.`,
+                explanation: `Dieser Verknüpfungsoperator findet alle Treffer, in denen der markierte Suchbegriff nicht vorkommt.`,
                 attention: `Vorsicht!`,
                 attentionText: `Sie schließen dabei möglicherweise interessante Treffer aus, weil zufällig der Suchbegriff in ihm vorkommt!`,
                 example: `Beispiel`,
-                exampleIntro: `Die Eingabe <span class="searchPhrase">volkswirtschaftslehre NOT mankiw findet</span> findet`,
+                exampleIntro: `Die Eingabe <span class="searchPhrase">volkswirtschaftslehre NICHT mankiw findet</span> findet`,
                 exampleResult: [
                     `Ending: Volkswirtschaftslehre – schnell erfasst`
                 ]
             },
             nearOperators: {
-                headline: `-, NICHT, nicht, NOT, not`,
+                headline: `NEAR, Within, Adj(acent)`,
                 explanation: `legt die maximalen Abstände zwischen den Suchbegriffen und eventuel ihre Reihenfolge fest. Siehe Hilfetext der Ressourcen!`,
                 example: `Beispiel`,
                 exampleIntro: `Die Eingabe <span class="searchPhrase">gesellschaft w/2 medien</span> (w/2 bedeutet, dass nicht mehr als 2 Worte zwischen den Suchbegriffen liegen) findet:`,
@@ -242,7 +242,7 @@ module.exports = {
             }
         },
         { //page9
-            headline: `Verknüpfen mit verschiedenen Operatoren`,
+            headline: `Verknüpfen mit unterschiedlichen Operatoren`,
             exampleHeadline: `Beispiele`,
             preCombination: {
                 explanation: `Wollen Sie mehr als zwei Suchbegriffe mit unterschiedlichen Operatoren verknüpfen, so müssen Sie Klammern setzen, um deutlich zu machen, in welcher Reihenfolge die Verknüpfungen abgearbeitet werden sollen.`,
@@ -322,19 +322,19 @@ module.exports = {
             intro: `Die Phrasensuche kennen Sie aus dem Umgang mit Suchmaschinen: Wenn Sie eine bestimmte Wortfolge in Anführungszeichen setzen, bekommen Sie Treffer, in denen genau diese Wortfolge vorkommt. Wenn Sie die Anführungszeichen weglassen, bekommen Sie hingegen Treffer, in denen die Worte unabhängig von der Reihenfolge vorkommen.`,
             explanation: `Manche Ressourcen erlauben das Setzen eines Trunkierungszeichens (Wildcard-Operator, Joker, Platzhalter, s.o.) innerhalb der Phrasensuche. Es ersetzt dann nicht einen oder mehrere Buchstaben, sondern ein Wort. Es gibt auch gelegentlich Abstandsoperatoren, mit denen Sie den Abstand festlegen können, der maximal zwischen zwei Teilen einer Phrase liegen darf. Bitte lesen Sie die Hilfetexte der jeweiligen Ressource, um diese Suchformulierung zu erfahren.`,
             exampleHeadline: `Beispiele`,
-            exampleExplanation: `Mit der Eingabe „grundzüge der volkswirtschaftslehre" im Feld alle Wörter erhalten Sie u.a.`,
+            exampleExplanation: `Mit der Eingabe <span class="searchPhrase">grundzüge der volkswirtschaftslehre</span> im Feld alle Wörter erhalten Sie u.a.`,
             exampleResults: [
                 `Mankiw: Grundzüge der Volkswirtschaftslehre`,
                 `Wienert: Grundzüge der Volkswirtschaftslehre`,
                 `Hermann: Arbeitsbuch Grundzüge der Volkswirtschaftslehre`
             ],
-            examplePlusExplanation: `Mit der Eingabe „gesellschaft * medien“ erhalten Sie beispielsweise:`,
+            examplePlusExplanation: `Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld Titel erhalten Sie beispielsweise:`,
             examplePlusResults: [
                 `Müller: Gesellschaft und Medien`,
                 `Ziemann: Medien der Gesellschaft – Gesellschaft der Medien`,
                 `Gottwald: Alte Gesellschaft – neue Medien`,
                 `Langenbucher: Gesellschaft, elektronische Medien und Demokratie`,
-                `<strong>Aber nicht:</strong> Kamps: Die offene Gesellschaft und ihre Medien, wenn * nur ein Wort ersetzt.`
+                `<strong>Aber nicht:</strong> Kamps: Die offene Gesellschaft und ihre Medien, weil * nur ein Wort ersetzt.`
             ]
         },
         { //page16
@@ -350,7 +350,7 @@ module.exports = {
                 {
                     intro: `Mit der Eingabe <span class="searchPhrase">total quality management</span> im Feld "alle Wörter" finden Sie u.a.`,
                     result: [
-                        `Mankiw: Grundzüge der Volkswirtschaftslehre`
+                        `Saint Clair: Total quality management in information services`
                     ]
                 },
                 {
@@ -416,10 +416,17 @@ module.exports = {
         },
         {//page20
             headline: `Danke`,
-            relax: `...und zur Entspannung der Magennerven...`,
-            thanks: `Vielen Dank!`
+            relax: `... für das Mitmachen. Hoffentlich war diese Übung nützlich für Sie.`,
+            thanks: `Zur Entspannung der Magennerven`
         },
         {//page21
+            headline: `Feedback`,
+            enjoyed: `Ich kann von dem Modul gebrauchen`,
+            learned: `Ich habe Neues erfahren`,
+            bad: `nichts`,
+            good: `sehr viel`
+        },
+        {//page22
             headline: `Impressum`,
             email: `E-Mail`,
             projectTitle: `Projekt:`,
@@ -432,16 +439,12 @@ module.exports = {
             license: {
                 header: `Lizenzen`,
                 contentTitle: `Inhalt:`,
-                contentContent: `<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a><br/>`,
+                contentContent: `<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a><br/>`,
                 codeTitle: `Code:`,
                 codeContent: `<a href="https://opensource.org/licenses/MIT">MIT</a>`
             }
-        },
-        {//page22
-            headline: `Feedback`,
-            enjoyed: `Ich habe Spaß gehabt`,
-            learned: `Ich habe etwas gelernt`
         }
+
     ],
     feedbackConfirmBox: {
         yes: `Bestätigen`,

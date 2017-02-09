@@ -11,7 +11,7 @@
         {{exampleHeadline}}
     </h4>
     <p>
-        {{exampleExplanation}}
+        {{& exampleExplanation}}
     </p>
     <ul>
         {{#each exampleResults}}
@@ -20,8 +20,9 @@
         </li>
         {{/each}}
     </ul>
+    <p></p>
     <p>
-        {{examplePlusExplanation}}
+        {{& examplePlusExplanation}}
     </p>
     <ul>
 

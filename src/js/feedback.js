@@ -21,10 +21,6 @@ module.exports = function setupFeedbackChart($container) {
     var height = $coordinates.height();
     var widthRatio = width / 100;
     var heightRatio = height / 100;
-    // var templateData = {
-    //     no : $container.data('no'),
-    //     yes : $container.data('yes')
-    // };
 
 
     /**

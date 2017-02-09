@@ -32,5 +32,5 @@ in /js/feedbackStorage are two sample implementations
 ## License
 
 * Code: MIT
-* Content: CC BY-NC-SA 3.0
+* Content: CC BY-SA 4.0
 * Icons CC 3.0 BY [Material UI by Google](http://www.flaticon.com/packs/material-design)

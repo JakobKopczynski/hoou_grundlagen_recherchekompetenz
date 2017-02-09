@@ -4,9 +4,7 @@ Reveal.initialize({
     progress: true,
     history: false,
     center: false,
-    width: function (size) {
-        return parseInt('100%', 10) / 100 * size.presentationWidth - 380;
-    },
+    width: getWidth(),
     height: "100%",
     margin: 0,
     minScale: 0.2,
@@ -90,6 +88,13 @@ Reveal.initialize({
     ]
 });
 
+function getWidth() {
+    return parseInt('100%', 10) / 100 * document.querySelector('.reveal').offsetWidth - 380;
+}
+
+window.addEventListener('resize', function () {
+    Reveal.configure({width: getWidth()});
+});
 
 function resetSlideScrolling(slide) {
     $(slide).removeClass('scrollable-slide');
