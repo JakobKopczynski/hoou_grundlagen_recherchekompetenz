@@ -7,8 +7,8 @@ Hamburg Open Online University Grundlagen Recherchekompetenz
 1. run "npm install"
 
 ## Use it on GitHub Pages
-* [English](https://pascalpflaum.github.io/hoou_grundlagen_recherchekompetenz/public/en.html)
-* [German - Deutsch](https://pascalpflaum.github.io/hoou_grundlagen_recherchekompetenz/public/de.html)
+* [English](https://hoou-haw.github.io/hoou_grundlagen_recherchekompetenz/public/en.html)
+* [German - Deutsch](https://hoou-haw.github.io/hoou_grundlagen_recherchekompetenz/public/de.html)
 
 ## Host it
 It is just plain HTML/JS/CSS, so use your preferred server or hoster.
@@ -32,5 +32,5 @@ in /js/feedbackStorage are two sample implementations
 ## License
 
 * Code: MIT
-* Content: CC BY-SA 4.0
+* Content: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 * Icons CC 3.0 BY [Material UI by Google](http://www.flaticon.com/packs/material-design)
