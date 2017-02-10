@@ -38,6 +38,8 @@ function exerciseLoader(id, $container) {
 
     var $send = $container.find('.send');
     $send.on('click', onSend);
+    var reset = $container.find('.reset');
+    reset.on('click', onReset);
 
     var $elements = $container.find('table .elem');
 
@@ -65,6 +67,18 @@ function exerciseLoader(id, $container) {
         event.preventDefault();
         $elements.each(checkElem);
         checkTotalResult();
+    }
+
+    function onReset(event) {
+        event.preventDefault();
+        var $input = $elements.find('input');
+        $elements.find('.wrongChecked').removeClass('wrongChecked');
+        $elements.find('.correctChecked').removeClass('correctChecked');
+        $input.prop('disabled', false);
+        $input.prop('checked', false);
+        $send.show();
+        reset.hide();
+        currentExercise = 0;
     }
 
     function onLineClick(event) {
@@ -165,7 +179,8 @@ function exerciseLoader(id, $container) {
     }
 
     function finishedExercise() {
-        $container.find('a.send').hide();
+        $send.hide();
+        reset.show();
         $container.find('input').attr('disabled', true);
 
         if (incrementalExercise) {

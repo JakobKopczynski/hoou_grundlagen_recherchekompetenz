@@ -5,6 +5,7 @@ module.exports = {
     exercise: {
         info: `Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.`,
         submit: `Bestellen`,
+        reset: `Zurücksetzen`,
         next: `Weiter!`,
         correct: `Richtig!`,
         wrong: `Falsch!`,
@@ -113,7 +114,7 @@ module.exports = {
                 `Schlagwort`,
                 `Klassifikation`
             ],
-            rechercheCafeIntro: `Lesen Sie zunächst die Erläuterungen zu jedem Thema. In Anschluss können Sie die Tipps gleich im Recherchecafé* ausprobieren. Aber Achtung! Im Recherchecafé* bekommen Sie nur das, was Sie bestellen, und das ist nicht immer das, was Sie auch wünschen.`,
+            rechercheCafeIntro: `Lesen Sie zunächst die Erläuterungen zu jedem Thema. Im Anschluss können Sie die Tipps gleich im Recherchecafé* ausprobieren. Aber Achtung! Im Recherchecafé* bekommen Sie nur das, was Sie bestellen, und das ist nicht immer das, was Sie auch wünschen.`,
             rechercheCafeIdee: `* Das Recherchecafé wurde von der Idee des Boole\`schen Restaurants inspiriert, vgl. Donald A. Barclay: Teaching the standard features of electronic databases. In: Teaching electronic information literacy : a how-to-do-it manual / ed. by Donald A. Barclay. New York: Neal-Schuman, 1995. S. 65 sowie Detlev Bieler, Thomas Hapke, Oliver Marahrens, TUB Hamburg-Harburg: DISCUS`
         },
         { //page2
@@ -128,31 +129,32 @@ module.exports = {
             nextPage: `Auf der folgenden Seite finden Sie Beispiele für formale Suchen.`
         },
         { //page3
-            headline: `Beispiel - Formale Suche`,
-            intro: `In einer Literaturliste finden Sie die Angaben „Nicholas Gregory Mankiw: Grundzüge der Volkswirtschaftslehre. 4. Aufl. Schäffer-Poeschel, 2008“: Im Bibliothekskatalog finden Sie das gewünschte Buch wenn Sie im Feld "alle Wörter" jedes beliebige Stichwort aus diesen Angaben eingeben, z.B.`,
+            headline: `Beispiele - Formale Suche`,
+            intro: `1. In einer Literaturliste finden Sie die Angaben „Nicholas Gregory Mankiw: Grundzüge der Volkswirtschaftslehre. 4. Aufl. Schäffer-Poeschel, 2008“: Im Bibliothekskatalog finden Sie das gewünschte Buch wenn Sie im Feld "alle Wörter" jedes beliebige Stichwort aus diesen Angaben eingeben, z.B.`,
             introExamples: [
                 `Mankiw, Nicholas Gregory`,
                 `Volkswirtschaftslehre Nicholas`,
                 `volkswirtschaftslehre grundzüge`
             ],
-            professorRecommendation: `Ihr Professor empfiehlt Ihnen in Fragen des bibliothekarischen Grundwissens (z.B. Was ist ein Stichwort?) im „Hacker“ nachzuschlagen: Wenn Sie nun im Bibliothekskatalog "Hacker" über das Feld alle Wörter suchen, werden Sie viele Treffer erzielen, die nichts mit der gesuchten Person zu tun haben, sondern mit IT-Spezialisten.`,
+            professorRecommendation: `2. Ihr Professor empfiehlt Ihnen in Fragen des bibliothekarischen Grundwissens (z.B. Was ist ein Stichwort?) im „Hacker“ nachzuschlagen: Wenn Sie nun im Bibliothekskatalog <span class="searchPhrase">Hacker</span> über das Feld <span class="fieldName">alle Wörter</span> suchen, werden Sie viele Treffer erzielen, die nichts mit der gesuchten Person zu tun haben, sondern mit IT-Spezialisten.`,
             authorHacker: `Wenn Sie hingegen im Feld "Person, Autor" den Suchbegriff "Hacker" eingeben, finden Sie nur Bücher, deren Autor ein Mensch namens Hacker ist. – Übrigens: Die meisten Ressourcen verlangen im Feld Autor die Ansetzung „Nachname, Vorname“, also`,
             authorHackerExamples: [
                 `Mankiw, Nicholas`,
                 `Hacker, Rupert`
             ],
-            or: `oder`
+            or: `oder`,
+            outro: `Prüfen Sie in den Hilfetexten der jeweiligen Ressource, wie Namen angesetzt werden.`
         },
         { //page4
             headline: `Übung - formale Suche 1`,
-            explanation: `Sie finden in einer Literaturliste den Hinweis auf “Pharisäer”. Wie bei der formalen Suche kennen Sie alle Angaben und bestellen mit der Eingabe <span class="searchPhrase">pharisäer.</span>`,
+            explanation: `Da Sie formale Angaben kennen, machen Sie eine formale Suche und bestellen mit der Eingabe <span class="searchPhrase">pharisäer</span>.`,
             wrong: `Ein bisschen mehr Ernsthaftigkeit, bitte!<br/>Es wird gleich schwieriger.<br/>Genau eine Antwort ist richtig.`
         },
         { //page5
             headline: `Übung - formale Suche 2`,
             explanation: `Sie bekommen von einem Kommilitonen mündlich den Hinweis auf eine italienische Kaffespezialität und bestellen mit der Eingabe <span class="searchPhrase">latte macciato</span>.`,
-            correct: `Genau! Sie bekommen nichts aus der Liste.<br/>Bei der formalen Suche kommt es darauf an, dass die Wörter korrekt geschrieben sind.`,
-            wrong: `Schauen Sie nochmal genau nach. Denken Sie daran, dass es bei der formalen Suche wichtig ist, dass alle Wörter korrekt geschrieben sind. Und denken Sie daran, manchmal ist auch keine der Antworten richtig.`
+            correct: `Genau! Sie bekommen nichts aus der Liste.<br/>Bei der Suche kommt es darauf an, dass die Wörter korrekt geschrieben sind.`,
+            wrong: `Schauen Sie nochmal genau nach. Denken Sie daran, dass es bei der Suche wichtig ist, dass alle Wörter korrekt geschrieben sind. Und denken Sie daran, manchmal ist auch keine der Antworten richtig.`
         },
         {//page6
             headline: `Trunkieren`,
@@ -185,12 +187,13 @@ module.exports = {
                 'Betriebswirtschaftslehre',
                 'Hauswirtschaftlerin'
             ],
-            truncationAsteriskSummary: `Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben vor und/oder nach dem von Ihnen eingegebenen Wort.`
+            truncationAsteriskSummary: `Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben vor und/oder nach dem von Ihnen eingegebenen Wort.`,
+            outro: `Wenn Sie Suchbegriffe trunkieren, erhalten Sie eine größere Treffermenge, als wenn Sie das nicht tun.`
         },
         { //page7
             headline: `Übung`,
-            explanation: `Sie wünschen Kaffee mit Schlagsahne oder Schlagobers und bestellen mit der Eingabe <span class="searchPhrase">schlag*</span>.<br/>Das * ersetzt eine beliebige Anzahl von Buchstaben, die dem eingegebenen schlag folgen. Bitte markieren Sie alles, was Sie bekommen.`,
-            wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie mit der Eingabe schlag* 7 Spezialitäten von unserer Karte.`
+            explanation: `Sie wünschen Kaffee mit Schlagsahne oder Schlagobers und bestellen mit der Eingabe <span class="searchPhrase">schlag*</span>.<br/>Das * ersetzt eine beliebige Anzahl von Buchstaben am Ende des Suchbegriffs.`,
+            wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie mit der Eingabe <span class="searchPhrase">schlag*</span> 7 Spezialitäten von unserer Karte.`
         },
         { //page8
             headline: `Verknüpfen`,
@@ -348,7 +351,7 @@ module.exports = {
             exampleHeadline: `Beispiele`,
             examples: [
                 {
-                    intro: `Mit der Eingabe <span class="searchPhrase">total quality management</span> im Feld "alle Wörter" finden Sie u.a.`,
+                    intro: `Mit der Eingabe <span class="searchPhrase">total quality management</span> im Feld <span class="fieldName">alle Wörter</span> finden Sie u.a.`,
                     result: [
                         `Saint Clair: Total quality management in information services`
                     ]

@@ -12,7 +12,7 @@
         {{/each}}
     </ul>
     <p>
-        {{professorRecommendation}}
+        {{& professorRecommendation}}
     </p>
     <p>
         {{authorHacker}}
@@ -28,6 +28,9 @@
             {{authorHackerExamples.[1]}}
         </li>
     </ul>
+    <h4 class="icon icon-information">
+        {{outro}}
+    </h4>
     {{/with}}
     {{> pageNavigationFull}}
 </section>
