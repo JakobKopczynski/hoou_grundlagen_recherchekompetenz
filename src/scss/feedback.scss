@@ -19,56 +19,31 @@
   > .bad {
     transform: rotate(45deg);
     transform-origin: 0 0;
-    top: 656px;
+    top: 710px;
     left: 80px;
     position: absolute;
   }
 
   > .goodX {
-    top: 670px;
+    top: 730px;
     left: 650px;
     position: absolute;
   }
 
   > .goodY {
-    top: 75px;
+    top: 120px;
     left: 30px;
     position: absolute;
   }
 
   .coordinates {
 
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
+    border: 3px solid black;
     background: linear-gradient(60deg, rgb(232, 84, 84), rgb(146, 208, 80));
     width: 600px;
     height: 600px;
     left: 40px;
     position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      transform: rotate(45deg);
-      left: -13px;
-      top: 3px;
-      border-top: 2px solid black;
-      border-left: 2px solid black;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      transform: rotate(45deg);
-      right: 3px;
-      bottom: -13px;
-      border-top: 2px solid black;
-      border-right: 2px solid black;
-    }
 
     &.active {
       cursor: crosshair;

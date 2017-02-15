@@ -24,6 +24,11 @@
     <h3 class="icon icon-example">
         {{examples}}
     </h3>
+    <h4>
+        <ol start="2">
+            <li>{{truncationQuestionmarkSummary}}</li>
+        </ol>
+    </h4>
     <p>
         {{& exampleSearchQuestionmarkIntro}}
     </p>
@@ -41,11 +46,11 @@
             {{exampleSearchQuestionmarkList.[2]}}
         </li>
     </ul>
-    <p class="extraPaddingBottom">
-        <strong>
-            {{truncationQuestionmarkSummary}}
-        </strong>
-    </p>
+    <h4>
+        <ol start="2">
+            <li>{{truncationAsteriskSummary}}</li>
+        </ol>
+    </h4>
     <p>
         {{& exampleSearchAsteriskIntro}}
     </p>
@@ -66,11 +71,6 @@
         </li>
         {{/each}}
     </ul>
-    <p>
-        <strong>
-            {{truncationAsteriskSummary}}
-        </strong>
-    </p>
     <h4 class="icon icon-information">
         {{outro}}
     </h4>

@@ -10,9 +10,11 @@
         {{exampleHeadline}}
     </h4>
     {{#each examples}}
+    {{#if intro}}
     <p>
         {{& intro}}
     </p>
+    {{/if}}
     <ul>
         {{#each result}}
         <li>
@@ -20,6 +22,11 @@
         </li>
         {{/each}}
     </ul>
+    {{#if outro}}
+        <p>
+            {{& outro}}
+        </p>
+    {{/if}}
     {{/each}}
     {{/with}}
     {{> pageNavigationFull}}

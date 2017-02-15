@@ -483,6 +483,11 @@
                 <h3 class="icon icon-example">
                     Beispiele
                 </h3>
+                <h4>
+                    <ol start="2">
+                        <li>Im Hilfetext steht: Das Trunkierungszeichen ? ersetzt einen Buchstaben</li>
+                    </ol>
+                </h4>
                 <p>
                     Sie geben in eine Ressource <span class="searchPhrase">me?er</span> ein und erhalten Treffer, in denen folgende Worte vorkommen:
                 </p>
@@ -500,11 +505,11 @@
                         Meter
                     </li>
                 </ul>
-                <p class="extraPaddingBottom">
-                    <strong>
-                        Trunkierungszeichen ? ersetzt einen Buchstaben
-                    </strong>
-                </p>
+                <h4>
+                    <ol start="2">
+                        <li>Im Hilfetext steht: Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben vor und/oder nach dem von Ihnen eingegebenen Wort.</li>
+                    </ol>
+                </h4>
                 <p>
                     Die Eingabe <span class="searchPhrase">wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen, z.B.
                 </p>
@@ -533,11 +538,6 @@
                         Hauswirtschaftlerin
                     </li>
                 </ul>
-                <p>
-                    <strong>
-                        Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben vor und/oder nach dem von Ihnen eingegebenen Wort.
-                    </strong>
-                </p>
                 <h4 class="icon icon-information">
                     Wenn Sie Suchbegriffe trunkieren, erhalten Sie eine größere Treffermenge, als wenn Sie das nicht tun.
                 </h4>
@@ -728,11 +728,11 @@
                 <p>
                     Nachfolgend finden Sie die wichtigsten Verknüpfungsoperatoren und Beispiele.
                 </p>
-                <h3>
-                    Leerzeichen, +, UND, und, AND, and
+                <h3 class="extraSpace">
+                    1. Leerzeichen, +, UND, und, AND, and
                 </h3>
                 <p>
-                    Diese Verknüpfungsoperatoren finden alle Treffer, in denen alle verknüpften Suchbegriffe vorkommen
+                    Dieser Verknüpfungsoperator findet alle Treffer, in denen alle verknüpften Suchbegriffe vorkommen.
                 </p>
                 <h4 class="icon icon-example">
                     Beispiel
@@ -745,8 +745,8 @@
                         Mankiw: Grundzüge der Volkswirtschaftslehre
                     </li>
                 </ul>
-                <h3>
-                    /, ODER, oder, OR, or
+                <h3 class="extraSpace">
+                    2. /, ODER, oder, OR, or
                 </h3>
                 <p>
                     Dieser Verknüpfungsoperator findet alle Treffer, in denen mindestens ein Suchbegriff vorkommt.
@@ -765,8 +765,8 @@
                         Mankiw: Grundzüge der Volkswirtschaftslehre
                     </li>
                 </ul>
-                <h3>
-                    -, NICHT, nicht, NOT, not
+                <h3 class="extraSpace">
+                    3. -, NICHT, nicht, NOT, not
                 </h3>
                 <p>
                     Dieser Verknüpfungsoperator findet alle Treffer, in denen der markierte Suchbegriff nicht vorkommt.
@@ -785,11 +785,11 @@
                         Ending: Volkswirtschaftslehre – schnell erfasst
                     </li>
                 </ul>
-                <h3>
-                    NEAR, Within, Adj(acent)
+                <h3 class="extraSpace">
+                    4. NEAR, Within, Adj(acent)
                 </h3>
                 <p>
-                    legt die maximalen Abstände zwischen den Suchbegriffen und eventuel ihre Reihenfolge fest. Siehe Hilfetext der Ressourcen!
+                    Dieser Verknüpfungsoperator legt die maximalen Abstände zwischen den Suchbegriffen und eventuell ihre Reihenfolge fest. Siehe Hilfetexte der Ressourcen!
                 </p>
                 <h4 class="icon icon-example">
                     Beispiel
@@ -867,9 +867,12 @@
                 </p>
                 <ol start="7">
                     <li>
-                        Die Postkoordination von Ergebnis 5 UND Ergebnis 6 - &#x3D;&gt; führt zur selben Treffermenge wie die Präkombination im 2. Beispiel oben
+                        Ergebnis 5 UND Ergebnis 6 &#x3D; Ergebnis 7
                     </li>
                 </ol>
+                <h4 class="icon icon-information">
+                    Das Ergebnis der postkoordinierten Suche führt ist dasselbe wie das Ergebnis der 2. präkombinierten Suche.
+                </h4>
                 <div class="navigation withPrev withNext"></div></section>            <section class="with-exercise">
                 <h2 class="icon icon-exercise">Übung - UND</h2>
                 <p>Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.</p>
@@ -1568,7 +1571,7 @@
                 <div class="navigation withPrev withNext"></div>
             </section>            <section class="with-exercise">
                 <h2 class="icon icon-exercise">Übung - Postkoordination</h2>
-                <p>Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.</p>
+                <p>Mit dieser nachträglichen Koordination der Suchbegriffe haben Sie dasselbe Ergebnis erzielt wie mit der präkombinierten Suche <span class="searchPhrase">(kaffee ODER mokka)</span> UND <span class="searchPhrase">(sahne ODER obers)</span>.</p>
                 <p></p>
                 <form
                         class="exercise"
@@ -1827,7 +1830,7 @@
                 Beispiele
             </h4>
             <p>
-                Mit der Eingabe <span class="searchPhrase">grundzüge der volkswirtschaftslehre</span> im Feld alle Wörter erhalten Sie u.a.
+                Mit der Eingabe <span class="searchPhrase">grundzüge der volkswirtschaftslehre</span> im Feld <span class="fieldName">alle Wörter</span> erhalten Sie u.a.
             </p>
             <ul>
                 <li>
@@ -1840,9 +1843,11 @@
                     Hermann: Arbeitsbuch Grundzüge der Volkswirtschaftslehre
                 </li>
             </ul>
-            <p></p>
+            <br/>
+            <br/>
+            <br/>
             <p>
-                Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld Titel erhalten Sie beispielsweise:
+                Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld <span class="fieldName">Titel</span> erhalten Sie beispielsweise:
             </p>
             <ul>
         
@@ -1890,8 +1895,11 @@
                         Saint Clair: Total quality management in information services
                     </li>
                 </ul>
+                    <p>
+                        In den Metadaten dieses Dokuments sehen Sie, dass für diese Quelle  u.a. das Schlagwort “Qualitätsmanagement” vergeben wurde. Mit der Suche Qualitätsmanagement im Feld Schlagwörter finden Sie auch
+                    </p>
                 <p>
-                    Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld "Schlagwort" finden Sie auch
+                    Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Schlagwort</span> finden Sie auch
                 </p>
                 <ul>
                     <li>
@@ -1909,14 +1917,14 @@
                 <p>Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.</p>
                 <p></p>
             
-                <form class="exercise" data-feedback-wrong="Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie mit der Schlagwort &#x3D; Kaffee UND Schlagwort &#x3D; Glas 4 Spezialitäten von unserer Karte." >
+                <form class="exercise" data-feedback-wrong="Das war noch nicht ganz korrekt. Kleiner Tipp: Sie erhalten 4 Spezialitäten von unserer Karte." >
                 <form class="exercise">
             
                     <table>
                         <thead>
                         <tr>
                             <th colspan="3">
-                                Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Schlagwort = Kaffee UND Schlagwort = Glas</span>.
+                                Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Kaffee UND Schlagwort = Glas</span> im Feld <span class="fieldName">Schlagwort</span>.
                                 <br/>
                                 Bitte markieren Sie alles, was Sie bekommen.
                             </th>
@@ -2075,7 +2083,7 @@
                 </h4>
             
                 <p>
-                    Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld "alle Wörter" finden Sie u.a.
+                    Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">alle Wörter</span> finden Sie u.a.
                 </p>
                 <ul>
                     <li>
@@ -2087,7 +2095,7 @@
                     Die Klasse mit der Notation Bwl 024 wurde Qualitätsmanagement benannt. In den Regalen mit der Bezeichnung Bwl 024 finden Sie also Bücher zum gleichen Thema und zwar nur die, die nicht ausgeliehen sind. Im Katalog können Sie zusätzlich feststellen, welche Bücher zum Thema derzeit ausgeliehen sind.
                 </p>
                 <p>
-                     Mit der Eingabe <span class="searchPhrase">Bwl 024*</span> (Trunkierung) in das Suchfeld "Signatur" erhalten Sie alle Treffer, die der Klasse Qualitätsmanagement zugeordnet wurden, u.a.
+                     Mit der Eingabe <span class="searchPhrase">Bwl 024*</span> (Trunkierung) in das Suchfeld <span class="fieldName">Signatur</span> erhalten Sie alle Treffer, die der Klasse Qualitätsmanagement zugeordnet wurden, u.a.
                 </p>
                 <ul>
                     <li>
@@ -2104,7 +2112,7 @@
                 <div class="navigation withPrev withNext"></div>
             </section>            <section class="with-exercise">
                 <h2 class="icon icon-exercise">Übung</h2>
-                <p>Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.</p>
+                <p>Sie können nun diese Tipps im Recherchecafé ausprobieren.</p>
                 <p></p>
             
                 <form class="exercise" data-multi-exercise="true">
@@ -2348,11 +2356,12 @@
                     ... für das Mitmachen. Hoffentlich war diese Übung nützlich für Sie.
                 </p>
                 <img src="img/greenTea.jpg"/>
-                <h4>
+                <p>
                     Zur Entspannung der Magennerven
-                </h4>
+                </p>
                 <div class="navigation withPrev withNext"></div></section>            <section>
                 <h2>Feedback</h2>
+                <p>Bitte markieren Sie mit einem rechten Mausklick den Punkt, der ihrer Meinung entspricht.<p>
                 <div class="feedbackArea" data-no="" data-yes="">
                     <div class="enjoyed">
                         Ich kann von dem Modul gebrauchen
