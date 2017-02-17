@@ -70,10 +70,10 @@ function exerciseLoader(id, $container) {
     }
 
     function onReset(event) {
+        debugger;
         event.preventDefault();
         var $input = $elements.find('input');
-        $elements.find('.wrongChecked').removeClass('wrongChecked');
-        $elements.find('.correctChecked').removeClass('correctChecked');
+        $elements.filter('.correctChecked, .wrongChecked').removeClass('correctChecked wrongChecked');
         $input.prop('disabled', false);
         $input.prop('checked', false);
         $send.show();
