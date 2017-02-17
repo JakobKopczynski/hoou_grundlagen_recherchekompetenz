@@ -4,6 +4,7 @@ module.exports = {
     },
     exercise: {
         info: `Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.`,
+        shortInfo: `Sie können nun diese Tipps im Recherchecafé ausprobieren.`,
         submit: `Bestellen`,
         reset: `Zurücksetzen`,
         next: `Weiter!`,
@@ -174,7 +175,7 @@ module.exports = {
                 `Meter`
             ],
             andAlso: `aber auch`,
-            truncationQuestionmarkSummary: `Trunkierungszeichen ? ersetzt einen Buchstaben`,
+            truncationQuestionmarkSummary: `Im Hilfetext steht: Das Trunkierungszeichen ? ersetzt einen Buchstaben`,
             exampleSearchAsteriskIntro: `Die Eingabe <span class="searchPhrase">wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen, z.B.`,
             exampleSearchAsteriskList: [
                 'Wirtschaft',
@@ -187,7 +188,7 @@ module.exports = {
                 'Betriebswirtschaftslehre',
                 'Hauswirtschaftlerin'
             ],
-            truncationAsteriskSummary: `Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben vor und/oder nach dem von Ihnen eingegebenen Wort.`,
+            truncationAsteriskSummary: `Im Hilfetext steht: Das Trunkierungszeichen * ersetzt keinen bis zu einer beliebigen Anzahl von Buchstaben vor und/oder nach dem von Ihnen eingegebenen Wort.`,
             outro: `Wenn Sie Suchbegriffe trunkieren, erhalten Sie eine größere Treffermenge, als wenn Sie das nicht tun.`
         },
         { //page7
@@ -200,8 +201,8 @@ module.exports = {
             intro: `Eine Form der Verknüpfung kennen Sie aus dem Umgang mit Suchmaschinen: Wenn Sie mehrere Suchbegriffe, durch Leerzeichen voneinander getrennt, hintereinander schreiben, erhalten Sie Treffer, in denen alle Suchbegriffe vorkommen, unabhängig von der Reihenfolge und den Zusammenhängen. In manchen Ressourcen werden diese Verknüpfungs-Operatoren durch Zeichen oder Wörter dargestellt, in manchen durch Felder zum Anklicken.`,
             importantOperators: `Nachfolgend finden Sie die wichtigsten Verknüpfungsoperatoren und Beispiele.`,
             andOperators: {
-                headline: 'Leerzeichen, +, UND, und, AND, and',
-                explanation: `Diese Verknüpfungsoperatoren finden alle Treffer, in denen alle verknüpften Suchbegriffe vorkommen`,
+                headline: '1. Leerzeichen, +, UND, und, AND, and',
+                explanation: `Dieser Verknüpfungsoperator findet alle Treffer, in denen alle verknüpften Suchbegriffe vorkommen.`,
                 exampleHeadline: `Beispiel`,
                 exampleIntro: `Die Eingabe <span class="searchPhrase">mankiw UND volkswirtschaftslehre</span> findet`,
                 exampleResult: [
@@ -209,7 +210,7 @@ module.exports = {
                 ]
             },
             orOperators: {
-                headline: `/, ODER, oder, OR, or`,
+                headline: `2. /, ODER, oder, OR, or`,
                 explanation: `Dieser Verknüpfungsoperator findet alle Treffer, in denen mindestens ein Suchbegriff vorkommt.`,
                 attention: `Achtung!`,
                 attentionText: `Anders als im normalen Sprachgebrauch handelt es sich hier nicht um ein exklusives ODER („Christin oder Jakob machen den Abwasch“), sondern um ein inklusives ODER („Christin oder Jakob oder beide …“)!`,
@@ -222,7 +223,7 @@ module.exports = {
                 ]
             },
             notOperators: {
-                headline: `-, NICHT, nicht, NOT, not`,
+                headline: `3. -, NICHT, nicht, NOT, not`,
                 explanation: `Dieser Verknüpfungsoperator findet alle Treffer, in denen der markierte Suchbegriff nicht vorkommt.`,
                 attention: `Vorsicht!`,
                 attentionText: `Sie schließen dabei möglicherweise interessante Treffer aus, weil zufällig der Suchbegriff in ihm vorkommt!`,
@@ -233,8 +234,8 @@ module.exports = {
                 ]
             },
             nearOperators: {
-                headline: `NEAR, Within, Adj(acent)`,
-                explanation: `legt die maximalen Abstände zwischen den Suchbegriffen und eventuel ihre Reihenfolge fest. Siehe Hilfetext der Ressourcen!`,
+                headline: `4. NEAR, Within, Adj(acent)`,
+                explanation: `Dieser Verknüpfungsoperator legt die maximalen Abstände zwischen den Suchbegriffen und eventuell ihre Reihenfolge fest. Siehe Hilfetexte der Ressourcen!`,
                 example: `Beispiel`,
                 exampleIntro: `Die Eingabe <span class="searchPhrase">gesellschaft w/2 medien</span> (w/2 bedeutet, dass nicht mehr als 2 Worte zwischen den Suchbegriffen liegen) findet:`,
                 exampleResult: [
@@ -271,8 +272,9 @@ module.exports = {
                 ],
                 exampleFinalCombination: `Nun koordinieren Sie auch noch die Ergebnisse der Suchen 5 und 6:`,
                 exampleFinalCombinationResult: [
-                    `Die Postkoordination von Ergebnis 5 UND Ergebnis 6 - => führt zur selben Treffermenge wie die Präkombination im 2. Beispiel oben`
-                ]
+                    `Ergebnis 5 UND Ergebnis 6 = Ergebnis 7`
+                ],
+                exampleOutro: `Das Ergebnis der postkoordinierten Suche führt ist dasselbe wie das Ergebnis der 2. präkombinierten Suche.`
             }
         },
         { //page10
@@ -299,6 +301,7 @@ module.exports = {
         },
         { //page14
             headline: `Übung - Postkoordination`,
+            intro: `Mit dieser nachträglichen Koordination der Suchbegriffe haben Sie dasselbe Ergebnis erzielt wie mit der präkombinierten Suche <span class="searchPhrase">(kaffee ODER mokka)</span> UND <span class="searchPhrase">(sahne ODER obers)</span>.`,
             explanation: `Sie erinnern sich: Bei der Postkoordination führen Sie die einzelnen Suchen nacheinander aus und schränken die Treffermenge dann nach und nach ein. Sie wünschen Kaffee oder Mokka mit Sahne oder Obers.`,
             tasks: [
                 {
@@ -325,13 +328,13 @@ module.exports = {
             intro: `Die Phrasensuche kennen Sie aus dem Umgang mit Suchmaschinen: Wenn Sie eine bestimmte Wortfolge in Anführungszeichen setzen, bekommen Sie Treffer, in denen genau diese Wortfolge vorkommt. Wenn Sie die Anführungszeichen weglassen, bekommen Sie hingegen Treffer, in denen die Worte unabhängig von der Reihenfolge vorkommen.`,
             explanation: `Manche Ressourcen erlauben das Setzen eines Trunkierungszeichens (Wildcard-Operator, Joker, Platzhalter, s.o.) innerhalb der Phrasensuche. Es ersetzt dann nicht einen oder mehrere Buchstaben, sondern ein Wort. Es gibt auch gelegentlich Abstandsoperatoren, mit denen Sie den Abstand festlegen können, der maximal zwischen zwei Teilen einer Phrase liegen darf. Bitte lesen Sie die Hilfetexte der jeweiligen Ressource, um diese Suchformulierung zu erfahren.`,
             exampleHeadline: `Beispiele`,
-            exampleExplanation: `Mit der Eingabe <span class="searchPhrase">grundzüge der volkswirtschaftslehre</span> im Feld alle Wörter erhalten Sie u.a.`,
+            exampleExplanation: `Mit der Eingabe <span class="searchPhrase">grundzüge der volkswirtschaftslehre</span> im Feld <span class="fieldName">alle Wörter</span> erhalten Sie u.a.`,
             exampleResults: [
                 `Mankiw: Grundzüge der Volkswirtschaftslehre`,
                 `Wienert: Grundzüge der Volkswirtschaftslehre`,
                 `Hermann: Arbeitsbuch Grundzüge der Volkswirtschaftslehre`
             ],
-            examplePlusExplanation: `Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld Titel erhalten Sie beispielsweise:`,
+            examplePlusExplanation: `Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld <span class="fieldName">Titel</span> erhalten Sie beispielsweise:`,
             examplePlusResults: [
                 `Müller: Gesellschaft und Medien`,
                 `Ziemann: Medien der Gesellschaft – Gesellschaft der Medien`,
@@ -354,10 +357,11 @@ module.exports = {
                     intro: `Mit der Eingabe <span class="searchPhrase">total quality management</span> im Feld <span class="fieldName">alle Wörter</span> finden Sie u.a.`,
                     result: [
                         `Saint Clair: Total quality management in information services`
-                    ]
+                    ],
+                    outro: `In den Metadaten dieses Dokuments sehen Sie, dass für diese Quelle  u.a. das Schlagwort “Qualitätsmanagement” vergeben wurde. Mit der Suche Qualitätsmanagement im Feld Schlagwörter finden Sie auch`
                 },
                 {
-                    intro: `Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld "Schlagwort" finden Sie auch`,
+                    intro: `Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Schlagwort</span> finden Sie auch`,
                     result: [
                         `Pfaff: ISO 9001:2008 : Basis für praxisgerechte Managementsysteme`,
                         `Osterhage: Abnahme komplexer Software-Systeme : das Praxishandbuch`,
@@ -368,8 +372,8 @@ module.exports = {
         },
         {//page17
             headline: `Übung`,
-            wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie mit der Schlagwort = Kaffee UND Schlagwort = Glas 4 Spezialitäten von unserer Karte.`,
-            explanation: `Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Schlagwort = Kaffee UND Schlagwort = Glas</span>.`
+            wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Sie erhalten 4 Spezialitäten von unserer Karte.`,
+            explanation: `Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Kaffee UND Schlagwort = Glas</span> im Feld <span class="fieldName">Schlagwort</span>.`
         },
         {//page18
             headline: `Klassifikation`,
@@ -381,13 +385,13 @@ module.exports = {
             exampleHeadline: `Beispiele`,
             examples: [
                 {
-                    intro: [`Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld "alle Wörter" finden Sie u.a.`],
+                    intro: [`Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">alle Wörter</span> finden Sie u.a.`],
                     results: [`Qualitätsmanagement DIN EN ISO 9000 ff : Dokumentensammlung – mit der Signatur „Bwl 024 118“`]
                 },
                 {
                     intro: [
                         `Die Klasse mit der Notation Bwl 024 wurde Qualitätsmanagement benannt. In den Regalen mit der Bezeichnung Bwl 024 finden Sie also Bücher zum gleichen Thema und zwar nur die, die nicht ausgeliehen sind. Im Katalog können Sie zusätzlich feststellen, welche Bücher zum Thema derzeit ausgeliehen sind.`,
-                        ` Mit der Eingabe <span class="searchPhrase">Bwl 024*</span> (Trunkierung) in das Suchfeld "Signatur" erhalten Sie alle Treffer, die der Klasse Qualitätsmanagement zugeordnet wurden, u.a.`
+                        ` Mit der Eingabe <span class="searchPhrase">Bwl 024*</span> (Trunkierung) in das Suchfeld <span class="fieldName">Signatur</span> erhalten Sie alle Treffer, die der Klasse Qualitätsmanagement zugeordnet wurden, u.a.`
                     ],
                     results: [
                         `Suganthi: Total Quality Management`,
@@ -424,6 +428,7 @@ module.exports = {
         },
         {//page21
             headline: `Feedback`,
+            intro: `Bitte markieren Sie mit einem rechten Mausklick den Punkt, der ihrer Meinung entspricht.`,
             enjoyed: `Ich kann von dem Modul gebrauchen`,
             learned: `Ich habe Neues erfahren`,
             bad: `nichts`,
@@ -451,6 +456,7 @@ module.exports = {
     ],
     feedbackConfirmBox: {
         yes: `Bestätigen`,
-        no: `Nein, doch nicht`
+        no: `Nein, doch nicht`,
+        thanks: `Danke!`
     }
 };

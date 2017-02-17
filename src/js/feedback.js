@@ -13,7 +13,7 @@ var templateData = require('../../content/' + $('html').attr('lang') + '.js').fe
  * extend a container into a feedback box
  * @param $container
  */
-module.exports = function setupFeedbackChart($container) {
+module.exports = function setupFeedbackChart ($container) {
 
     var $container = jQuery($container);
     var $coordinates = $container.children('.coordinates');
@@ -29,7 +29,7 @@ module.exports = function setupFeedbackChart($container) {
      * @param y
      * @param additionalClass (optional)
      */
-    function addCoordinateOnGraph(x, y, additionalClass) {
+    function addCoordinateOnGraph (x, y, additionalClass) {
 
         var $elem = jQuery('<div class="coordinate"/>')
             .css({
@@ -47,7 +47,7 @@ module.exports = function setupFeedbackChart($container) {
     /**
      * activate the feedback box
      */
-    function activeFeedbackBox() {
+    function activeFeedbackBox () {
 
         $coordinates.addClass('active');
         $coordinates.one('click', function (e) {
@@ -81,15 +81,19 @@ module.exports = function setupFeedbackChart($container) {
      * @param x
      * @param y
      */
-    function confirmFeedback(x, y) {
+    function confirmFeedback (x, y) {
 
         // get the "my" box
         var $myCoordinates = $coordinates.find('.my');
         var $confirmBox = jQuery(templates.confirmBox(templateData));
+
         $confirmBox.find('.yes').on('click', function () {
             storage.add(x, y);
             $myCoordinates.removeClass('my');
-            $confirmBox.remove();
+            $confirmBox.addClass('done');
+            setTimeout(function () {
+                $confirmBox.remove();
+            }, 5000);
             return false;
         });
         $confirmBox.find('.no').on('click', function () {
@@ -105,7 +109,7 @@ module.exports = function setupFeedbackChart($container) {
     /**
      * removing the user coordinate, if it doesn't get confirmed
      */
-    function removeMyCoordinates() {
+    function removeMyCoordinates () {
         $coordinates.find('.my').remove();
     }
 

@@ -1,116 +1,132 @@
 .feedbackArea {
 
-  > .enjoyed {
-    float: left;
-    transform: rotate(-90deg);
-    transform-origin: 0 0;
-    top: 400px;
-    left: 10px;
-    position: relative;
-  }
-
-  > .learned {
-    width: 600px;
-    text-align: center;
-    padding-left: 40px;
-    padding-top: 10px;
-  }
-
-  > .bad {
-    transform: rotate(45deg);
-    transform-origin: 0 0;
-    top: 710px;
-    left: 80px;
-    position: absolute;
-  }
-
-  > .goodX {
-    top: 730px;
-    left: 650px;
-    position: absolute;
-  }
-
-  > .goodY {
-    top: 120px;
-    left: 30px;
-    position: absolute;
-  }
-
-  .coordinates {
-
-    border: 3px solid black;
-    background: linear-gradient(60deg, rgb(232, 84, 84), rgb(146, 208, 80));
-    width: 600px;
-    height: 600px;
-    left: 40px;
-    position: relative;
-
-    &.active {
-      cursor: crosshair;
+    > .enjoyed {
+        float: left;
+        transform: rotate(-90deg);
+        transform-origin: 0 0;
+        top: 400px;
+        left: 10px;
+        position: relative;
     }
 
-    .coordinate {
-      height: 8px;
-      width: 8px;
-      background: black;
-      position: absolute;
-      border-radius: 4px;
-
-      &.my {
-        background: blue;
-      }
+    > .learned {
+        width: 600px;
+        text-align: center;
+        padding-left: 40px;
+        padding-top: 10px;
     }
 
-    .confirmFeedback {
-      position: relative;
-      background: #88b7d5;
-      border: 4px solid #c2e1f5;
-      padding: 8px;
-      width: 200px;
-      height: 40px;
-      border-radius: 6px;
-      left: -240px;
-      top: -29px;
-      position: relative;
+    > .bad {
+        transform: rotate(45deg);
+        transform-origin: 0 0;
+        top: 710px;
+        left: 80px;
+        position: absolute;
+    }
 
-      a {
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
-        margin: 4px;
-        padding-left: 35px;
-        &.no {
-          background: url('../../public/img/error.png') no-repeat left 4px center;
+    > .goodX {
+        top: 730px;
+        left: 650px;
+        position: absolute;
+    }
+
+    > .goodY {
+        top: 120px;
+        left: 30px;
+        position: absolute;
+    }
+
+    .coordinates {
+
+        border: 3px solid black;
+        background: linear-gradient(60deg, rgb(232, 84, 84), rgb(146, 208, 80));
+        width: 600px;
+        height: 600px;
+        left: 40px;
+        position: relative;
+
+        &.active {
+            cursor: crosshair;
         }
-        &.yes {
-          background: url('../../public/img/success.png') no-repeat left 4px center;
+
+        .coordinate {
+            height: 8px;
+            width: 8px;
+            background: black;
+            position: absolute;
+            border-radius: 4px;
+
+            &.my {
+                background: blue;
+            }
         }
-      }
+
+        .confirmFeedback {
+
+            &.done {
+                .during {
+                    display: none;
+                }
+                .after {
+                    display: block;
+                }
+            }
+
+            .after {
+                text-align: center;
+                line-height: 2;
+                font-size: larger;
+            }
+
+            position: relative;
+            background: #88b7d5;
+            border: 4px solid #c2e1f5;
+            padding: 8px;
+            width: 200px;
+            height: 40px;
+            border-radius: 6px;
+            left: -240px;
+            top: -29px;
+            position: relative;
+
+            a {
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+                margin: 4px;
+                padding-left: 35px;
+                &.no {
+                    background: url('../../public/img/error.png') no-repeat left 4px center;
+                }
+                &.yes {
+                    background: url('../../public/img/success.png') no-repeat left 4px center;
+                }
+            }
+
+        }
+        .confirmFeedback:after, .confirmFeedback:before {
+            left: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .confirmFeedback:after {
+            border-color: rgba(136, 183, 213, 0);
+            border-left-color: #88b7d5;
+            border-width: 15px;
+            margin-top: -15px;
+        }
+        .confirmFeedback:before {
+            border-color: rgba(194, 225, 245, 0);
+            border-left-color: #c2e1f5;
+            border-width: 17px;
+            margin-top: -17px;
+        }
 
     }
-    .confirmFeedback:after, .confirmFeedback:before {
-      left: 100%;
-      top: 50%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    .confirmFeedback:after {
-      border-color: rgba(136, 183, 213, 0);
-      border-left-color: #88b7d5;
-      border-width: 15px;
-      margin-top: -15px;
-    }
-    .confirmFeedback:before {
-      border-color: rgba(194, 225, 245, 0);
-      border-left-color: #c2e1f5;
-      border-width: 17px;
-      margin-top: -17px;
-    }
-
-  }
 }

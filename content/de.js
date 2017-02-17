@@ -456,6 +456,7 @@ module.exports = {
     ],
     feedbackConfirmBox: {
         yes: `Bestätigen`,
-        no: `Nein, doch nicht`
+        no: `Nein, doch nicht`,
+        thanks: `Danke!`
     }
 };
