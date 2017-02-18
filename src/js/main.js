@@ -54,7 +54,7 @@ Reveal.initialize({
         // properties, and either a 'src' or 'content' property.
         custom: [
             {title: 'DE', icon: '<img class="nav-flag" src="img/de.png">', link: 'de.html'},
-            {title: 'EN', icon: '<img class="nav-flag" src="img/gb.png">', link: 'en.html'}
+            // {title: 'EN', icon: '<img class="nav-flag" src="img/gb.png">', link: 'en.html'}
         ],
 
         // Specifies the themes that will be available in the themes

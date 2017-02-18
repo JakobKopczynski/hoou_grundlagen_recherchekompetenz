@@ -150,7 +150,7 @@ function exerciseLoader(id, $container) {
 
     function nextExercise() {
         var exercises = $container.find('thead span.exercise');
-
+debugger;
         //update progress
         updateProgress(currentExercise);
 

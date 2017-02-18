@@ -176,13 +176,13 @@ module.exports = {
             ],
             andAlso: `aber auch`,
             truncationQuestionmarkSummary: `Im Hilfetext steht: Das Trunkierungszeichen ? ersetzt einen Buchstaben`,
-            exampleSearchAsteriskIntro: `Die Eingabe <span class="searchPhrase">wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen, z.B.`,
+            exampleSearchAsteriskIntro: `ie geben in einer Ressource <span class="searchPhrase">wirtschaft*</span> ein und erhalten Treffer, in denen z.B. folgende Worte vorkommen, z.B.`,
             exampleSearchAsteriskList: [
                 'Wirtschaft',
                 'Wirtschafts-',
                 'Wirtschaftrecht'
             ],
-            exampleSearchDoubleAsteriskIntro: `Eingabe <span class="searchPhrase">*wirtschaft*</span> findet Treffer, in denen folgende Worte vorkommen:`,
+            exampleSearchDoubleAsteriskIntro: `Sie geben in einer Ressource <span class="searchPhrase">*wirtschaft*</span> ein und erhalten zusätzlich Treffer, in denen z.B. folgende Worte vorkommen:`,
             exampleSearchDoubleAsteriskList: [
                 'Wirtschaft',
                 'Betriebswirtschaftslehre',
@@ -274,7 +274,7 @@ module.exports = {
                 exampleFinalCombinationResult: [
                     `Ergebnis 5 UND Ergebnis 6 = Ergebnis 7`
                 ],
-                exampleOutro: `Das Ergebnis der postkoordinierten Suche führt ist dasselbe wie das Ergebnis der 2. präkombinierten Suche.`
+                exampleOutro: `Das Ergebnis der postkoordinierten Suche ist dasselbe wie das Ergebnis der 2. präkombinierten Suche.`
             }
         },
         { //page10
@@ -301,7 +301,7 @@ module.exports = {
         },
         { //page14
             headline: `Übung - Postkoordination`,
-            intro: `Mit dieser nachträglichen Koordination der Suchbegriffe haben Sie dasselbe Ergebnis erzielt wie mit der präkombinierten Suche <span class="searchPhrase">(kaffee ODER mokka)</span> UND <span class="searchPhrase">(sahne ODER obers)</span>.`,
+            allDone: `Mit dieser nachträglichen Koordination der Suchbegriffe haben Sie dasselbe Ergebnis erzielt wie mit der präkombinierten Suche <span class="searchPhrase">(kaffee ODER mokka)</span> UND <span class="searchPhrase">(sahne ODER obers)</span>.`,
             explanation: `Sie erinnern sich: Bei der Postkoordination führen Sie die einzelnen Suchen nacheinander aus und schränken die Treffermenge dann nach und nach ein. Sie wünschen Kaffee oder Mokka mit Sahne oder Obers.`,
             tasks: [
                 {
@@ -334,7 +334,7 @@ module.exports = {
                 `Wienert: Grundzüge der Volkswirtschaftslehre`,
                 `Hermann: Arbeitsbuch Grundzüge der Volkswirtschaftslehre`
             ],
-            examplePlusExplanation: `Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld <span class="fieldName">Titel</span> erhalten Sie beispielsweise:`,
+            examplePlusExplanation: `Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld <span class="fieldName">Titel</span> erhalten Sie u.a.:`,
             examplePlusResults: [
                 `Müller: Gesellschaft und Medien`,
                 `Ziemann: Medien der Gesellschaft – Gesellschaft der Medien`,
@@ -351,14 +351,14 @@ module.exports = {
                 `Die Suche mit Schlagworten führt zu besseren Ergebnissen, weil nach Inhalten gesucht wird und nicht nach Begriffen, die zufällig auch in dem Dokument vorkommen, aber wenig mit dem Inhalt des Dokuments zu tun haben.`,
                 `Welches Schlagwort für welchen Zusammenhang benutzt wird, erfahren Sie beispielsweise, indem Sie mit Stichworten Zufallstreffer erzielen und die Schlagworte, die für diese Zufallstreffer vergeben wurden, notieren und mit ihnen eine neue Suche starten.`
             ],
-            exampleHeadline: `Beispiele`,
+            exampleHeadline: `Beispiel`,
             examples: [
                 {
-                    intro: `Mit der Eingabe <span class="searchPhrase">total quality management</span> im Feld <span class="fieldName">alle Wörter</span> finden Sie u.a.`,
+                    intro: `Mit der Eingabe <span class="searchPhrase">total quality management</span> im Feld <span class="fieldName">Alle Wörter</span> finden Sie u.a.`,
                     result: [
                         `Saint Clair: Total quality management in information services`
                     ],
-                    outro: `In den Metadaten dieses Dokuments sehen Sie, dass für diese Quelle  u.a. das Schlagwort “Qualitätsmanagement” vergeben wurde. Mit der Suche Qualitätsmanagement im Feld Schlagwörter finden Sie auch`
+                    outro: `In den Metadaten dieses Dokuments sehen Sie, dass für diese Quelle  u.a. das Schlagwort “Qualitätsmanagement” vergeben wurde. Mit der Suche <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Schlagwörter</span> finden Sie auch`
                 },
                 {
                     intro: `Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Schlagwort</span> finden Sie auch`,
@@ -373,7 +373,7 @@ module.exports = {
         {//page17
             headline: `Übung`,
             wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Sie erhalten 4 Spezialitäten von unserer Karte.`,
-            explanation: `Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Kaffee UND Schlagwort = Glas</span> im Feld <span class="fieldName">Schlagwort</span>.`
+            explanation: `Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Kaffee UND Glas</span> im Feld <span class="fieldName">Schlagwort</span>.`
         },
         {//page18
             headline: `Klassifikation`,
@@ -385,13 +385,13 @@ module.exports = {
             exampleHeadline: `Beispiele`,
             examples: [
                 {
-                    intro: [`Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">alle Wörter</span> finden Sie u.a.`],
+                    intro: [`Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Alle Wörter</span> finden Sie u.a.`],
                     results: [`Qualitätsmanagement DIN EN ISO 9000 ff : Dokumentensammlung – mit der Signatur „Bwl 024 118“`]
                 },
                 {
                     intro: [
                         `Die Klasse mit der Notation Bwl 024 wurde Qualitätsmanagement benannt. In den Regalen mit der Bezeichnung Bwl 024 finden Sie also Bücher zum gleichen Thema und zwar nur die, die nicht ausgeliehen sind. Im Katalog können Sie zusätzlich feststellen, welche Bücher zum Thema derzeit ausgeliehen sind.`,
-                        ` Mit der Eingabe <span class="searchPhrase">Bwl 024*</span> (Trunkierung) in das Suchfeld <span class="fieldName">Signatur</span> erhalten Sie alle Treffer, die der Klasse Qualitätsmanagement zugeordnet wurden, u.a.`
+                        ` Mit der Eingabe <span class="searchPhrase">Bwl 024*</span> (Trunkierung) im Feld <span class="fieldName">Signatur</span> erhalten Sie alle Treffer, die der Klasse Qualitätsmanagement zugeordnet wurden, u.a.`
                     ],
                     results: [
                         `Suganthi: Total Quality Management`,
@@ -428,7 +428,7 @@ module.exports = {
         },
         {//page21
             headline: `Feedback`,
-            intro: `Bitte markieren Sie mit einem rechten Mausklick den Punkt, der ihrer Meinung entspricht.`,
+            intro: `Bitte markieren Sie mit einem Mausklick den Punkt, der ihrer Meinung entspricht.`,
             enjoyed: `Ich kann von dem Modul gebrauchen`,
             learned: `Ich habe Neues erfahren`,
             bad: `nichts`,
@@ -457,6 +457,6 @@ module.exports = {
     feedbackConfirmBox: {
         yes: `Bestätigen`,
         no: `Nein, doch nicht`,
-        thanks: `Danke!`
+        thanks: `Vielen Dank!`
     }
 };
