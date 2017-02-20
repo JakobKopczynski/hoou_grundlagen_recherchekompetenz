@@ -150,7 +150,7 @@ function exerciseLoader(id, $container) {
 
     function nextExercise() {
         var exercises = $container.find('thead span.exercise');
-debugger;
+
         //update progress
         updateProgress(currentExercise);
 
@@ -229,20 +229,27 @@ debugger;
     function showCorrectResult() {
 
         var $table = $container.find('table');
-        var $goodOverlay = jQuery(templates.resultCorrect(getFeedbackTemplateData()))
-            .on('click', function () {
-                var anotherExercise;
-                if (incrementalExercise || multiExercise) {
-                    currentExercise++;
-                    anotherExercise = nextExercise();
-                }
 
-                if (!anotherExercise) {
-                    finishedExercise();
-                }
-                $table.show();
-                $goodOverlay.remove();
-            })
+        function close() {
+            Reveal.removeEventListener('slidechanged', close);
+
+            var anotherExercise;
+            if (incrementalExercise || multiExercise) {
+                currentExercise++;
+                anotherExercise = nextExercise();
+            }
+
+            if (!anotherExercise) {
+                finishedExercise();
+            }
+            $table.show();
+            $goodOverlay.remove();
+        }
+
+        Reveal.addEventListener('slidechanged', close);
+
+        var $goodOverlay = jQuery(templates.resultCorrect(getFeedbackTemplateData()))
+            .on('click', close)
             .css({
                 height: ($table.height()) + 'px'
             })
@@ -252,12 +259,18 @@ debugger;
 
     function showBadResult() {
 
+        function close() {
+            Reveal.removeEventListener('slidechanged', close);
+            $table.show();
+            $badOverlay.remove();
+        }
+
         var $table = $container.find('table');
+
+        Reveal.addEventListener('slidechanged', close);
+
         var $badOverlay = jQuery(templates.resultWrong(getFeedbackTemplateData()))
-            .on('click', function () {
-                $table.show();
-                $badOverlay.remove();
-            })
+            .on('click', close)
             .css({
                 height: ($table.height()) + 'px'
             })

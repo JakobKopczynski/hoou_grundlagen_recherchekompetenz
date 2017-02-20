@@ -131,13 +131,13 @@ module.exports = {
         },
         { //page3
             headline: `Beispiele - Formale Suche`,
-            intro: `1. In einer Literaturliste finden Sie die Angaben „Nicholas Gregory Mankiw: Grundzüge der Volkswirtschaftslehre. 4. Aufl. Schäffer-Poeschel, 2008“: Im Bibliothekskatalog finden Sie das gewünschte Buch wenn Sie im Feld "alle Wörter" jedes beliebige Stichwort aus diesen Angaben eingeben, z.B.`,
+            intro: `1. In einer Literaturliste finden Sie die Angaben „Nicholas Gregory Mankiw: Grundzüge der Volkswirtschaftslehre. 4. Aufl. Schäffer-Poeschel, 2008“: Im Bibliothekskatalog finden Sie das gewünschte Buch wenn Sie im Feld <span class="fieldName">Alle Wörter</span> jedes beliebige Stichwort aus diesen Angaben eingeben, z.B.`,
             introExamples: [
                 `Mankiw, Nicholas Gregory`,
                 `Volkswirtschaftslehre Nicholas`,
                 `volkswirtschaftslehre grundzüge`
             ],
-            professorRecommendation: `2. Ihr Professor empfiehlt Ihnen in Fragen des bibliothekarischen Grundwissens (z.B. Was ist ein Stichwort?) im „Hacker“ nachzuschlagen: Wenn Sie nun im Bibliothekskatalog <span class="searchPhrase">Hacker</span> über das Feld <span class="fieldName">alle Wörter</span> suchen, werden Sie viele Treffer erzielen, die nichts mit der gesuchten Person zu tun haben, sondern mit IT-Spezialisten.`,
+            professorRecommendation: `2. Ihr Professor empfiehlt Ihnen in Fragen des bibliothekarischen Grundwissens (z.B. Was ist ein Stichwort?) im „Hacker“ nachzuschlagen: Wenn Sie nun im Bibliothekskatalog <span class="searchPhrase">Hacker</span> über das Feld <span class="fieldName">Alle Wörter</span> suchen, werden Sie viele Treffer erzielen, die nichts mit der gesuchten Person zu tun haben, sondern mit IT-Spezialisten.`,
             authorHacker: `Wenn Sie hingegen im Feld "Person, Autor" den Suchbegriff "Hacker" eingeben, finden Sie nur Bücher, deren Autor ein Mensch namens Hacker ist. – Übrigens: Die meisten Ressourcen verlangen im Feld Autor die Ansetzung „Nachname, Vorname“, also`,
             authorHackerExamples: [
                 `Mankiw, Nicholas`,
@@ -176,7 +176,7 @@ module.exports = {
             ],
             andAlso: `aber auch`,
             truncationQuestionmarkSummary: `Im Hilfetext steht: Das Trunkierungszeichen ? ersetzt einen Buchstaben`,
-            exampleSearchAsteriskIntro: `ie geben in einer Ressource <span class="searchPhrase">wirtschaft*</span> ein und erhalten Treffer, in denen z.B. folgende Worte vorkommen, z.B.`,
+            exampleSearchAsteriskIntro: `Sie geben in einer Ressource <span class="searchPhrase">wirtschaft*</span> ein und erhalten Treffer, in denen z.B. folgende Worte vorkommen, z.B.`,
             exampleSearchAsteriskList: [
                 'Wirtschaft',
                 'Wirtschafts-',
@@ -228,7 +228,7 @@ module.exports = {
                 attention: `Vorsicht!`,
                 attentionText: `Sie schließen dabei möglicherweise interessante Treffer aus, weil zufällig der Suchbegriff in ihm vorkommt!`,
                 example: `Beispiel`,
-                exampleIntro: `Die Eingabe <span class="searchPhrase">volkswirtschaftslehre NICHT mankiw findet</span> findet`,
+                exampleIntro: `Die Eingabe <span class="searchPhrase">volkswirtschaftslehre NICHT mankiw</span> findet`,
                 exampleResult: [
                     `Ending: Volkswirtschaftslehre – schnell erfasst`
                 ]
@@ -280,7 +280,7 @@ module.exports = {
         { //page10
             headline: `Übung - UND`,
             explanation: `Sie wünschen Kaffee mit Sahne und bestellen mit der Eingabe <span class="searchPhrase">kaffee UND sahne</span>.`,
-            wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie mit der Eingabe "kaffee UND sahne" 2 Spezialitäten von unserer Karte.`
+            wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Insgesamt bekommen Sie mit der Eingabe <span class="searchPhrase">kaffee UND sahne</span> 2 Spezialitäten von unserer Karte.`
         },
         { //page11
             headline: `Übung - ODER`,
@@ -301,6 +301,7 @@ module.exports = {
         },
         { //page14
             headline: `Übung - Postkoordination`,
+            intro: `Sie können nun diese Tipps im Recherchecafé ausprobieren. Aber Achtung! Im Recherchecafé bekommen Sie nur das, was Sie bestellen. Das ist nicht immer das, was Sie auch wünschen und manchmal bekommen Sie vielleicht auch gar nichts.`,
             allDone: `Mit dieser nachträglichen Koordination der Suchbegriffe haben Sie dasselbe Ergebnis erzielt wie mit der präkombinierten Suche <span class="searchPhrase">(kaffee ODER mokka)</span> UND <span class="searchPhrase">(sahne ODER obers)</span>.`,
             explanation: `Sie erinnern sich: Bei der Postkoordination führen Sie die einzelnen Suchen nacheinander aus und schränken die Treffermenge dann nach und nach ein. Sie wünschen Kaffee oder Mokka mit Sahne oder Obers.`,
             tasks: [
@@ -328,13 +329,13 @@ module.exports = {
             intro: `Die Phrasensuche kennen Sie aus dem Umgang mit Suchmaschinen: Wenn Sie eine bestimmte Wortfolge in Anführungszeichen setzen, bekommen Sie Treffer, in denen genau diese Wortfolge vorkommt. Wenn Sie die Anführungszeichen weglassen, bekommen Sie hingegen Treffer, in denen die Worte unabhängig von der Reihenfolge vorkommen.`,
             explanation: `Manche Ressourcen erlauben das Setzen eines Trunkierungszeichens (Wildcard-Operator, Joker, Platzhalter, s.o.) innerhalb der Phrasensuche. Es ersetzt dann nicht einen oder mehrere Buchstaben, sondern ein Wort. Es gibt auch gelegentlich Abstandsoperatoren, mit denen Sie den Abstand festlegen können, der maximal zwischen zwei Teilen einer Phrase liegen darf. Bitte lesen Sie die Hilfetexte der jeweiligen Ressource, um diese Suchformulierung zu erfahren.`,
             exampleHeadline: `Beispiele`,
-            exampleExplanation: `Mit der Eingabe <span class="searchPhrase">grundzüge der volkswirtschaftslehre</span> im Feld <span class="fieldName">alle Wörter</span> erhalten Sie u.a.`,
+            exampleExplanation: `Mit der Eingabe <span class="searchPhrase">"grundzüge der volkswirtschaftslehre"</span> im Feld <span class="fieldName">alle Wörter</span> erhalten Sie u.a.`,
             exampleResults: [
                 `Mankiw: Grundzüge der Volkswirtschaftslehre`,
                 `Wienert: Grundzüge der Volkswirtschaftslehre`,
                 `Hermann: Arbeitsbuch Grundzüge der Volkswirtschaftslehre`
             ],
-            examplePlusExplanation: `Mit der Eingabe <span class="searchPhrase">gesellschaft * medien</span> im Feld <span class="fieldName">Titel</span> erhalten Sie u.a.:`,
+            examplePlusExplanation: `Mit der Eingabe <span class="searchPhrase">"gesellschaft * medien"</span> im Feld <span class="fieldName">Titel</span> erhalten Sie u.a.:`,
             examplePlusResults: [
                 `Müller: Gesellschaft und Medien`,
                 `Ziemann: Medien der Gesellschaft – Gesellschaft der Medien`,
@@ -358,10 +359,10 @@ module.exports = {
                     result: [
                         `Saint Clair: Total quality management in information services`
                     ],
-                    outro: `In den Metadaten dieses Dokuments sehen Sie, dass für diese Quelle  u.a. das Schlagwort “Qualitätsmanagement” vergeben wurde. Mit der Suche <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Schlagwörter</span> finden Sie auch`
+                    outro: `In den Metadaten dieses Dokuments sehen Sie, dass für diese Quelle  u.a. das Schlagwort “Qualitätsmanagement” vergeben wurde.`
                 },
                 {
-                    intro: `Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Schlagwort</span> finden Sie auch`,
+                    intro: `Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Schlagwörter</span> finden Sie auch`,
                     result: [
                         `Pfaff: ISO 9001:2008 : Basis für praxisgerechte Managementsysteme`,
                         `Osterhage: Abnahme komplexer Software-Systeme : das Praxishandbuch`,
@@ -373,7 +374,7 @@ module.exports = {
         {//page17
             headline: `Übung`,
             wrong: `Das war noch nicht ganz korrekt. Kleiner Tipp: Sie erhalten 4 Spezialitäten von unserer Karte.`,
-            explanation: `Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Kaffee UND Glas</span> im Feld <span class="fieldName">Schlagwort</span>.`
+            explanation: `Sie wünschen Kaffee im Glas und bestellen mit der Eingabe <span class="searchPhrase">Kaffee UND Glas</span> im Feld <span class="fieldName">Schlagworte</span>.`
         },
         {//page18
             headline: `Klassifikation`,
@@ -382,7 +383,7 @@ module.exports = {
                 `Sie kennen Systematiken als Stammbaum in der Biologie und als Aufstellungssystematik in der Bibliothek. Wenn Sie ein Buch im Regal gefunden haben, das inhaltlich Ihren Vorstellungen entspricht, dann sehen Sie sich auch die Bücher links und rechts von dem gefundenen an, denn die behandeln wahrscheinlich das gleiche Thema.`,
                 `In einer Bibliothek steht ein Buch immer nur an einer Stelle, auch wenn es inhaltlich an zwei Stellen stehen könnte. In virtuellen Systematiken kann ein Dokument auch mehreren Klassen zugeordnet werden. Sie suchen mit der Hilfe einer Klassifikation, ähnlich wie mit Schlagworten, nach Inhalten und nicht nach zufälligen Stichworten. Die klassifikatorische Suche wird zumeist als Unterstützung anderer Recherchen eingesetzt, beispielsweise zur Einschränkung einer großen Treffermenge auf einen fachlichen Zusammenhang.`
             ],
-            exampleHeadline: `Beispiele`,
+            exampleHeadline: `Beispiel`,
             examples: [
                 {
                     intro: [`Mit der Eingabe <span class="searchPhrase">Qualitätsmanagement</span> im Feld <span class="fieldName">Alle Wörter</span> finden Sie u.a.`],
